@@ -1,0 +1,80 @@
+{
+  "common": {
+    "name": "vis-widgets-react-template",
+    "version": "0.1.0",
+    "news": {
+      "0.1.0": {
+        "en": "initial commit",
+        "de": "anfängliches Commit",
+        "ru": "начальная фиксация",
+        "pt": "commit inicial",
+        "nl": "initiële commit",
+        "fr": "validation initiale",
+        "it": "impegno iniziale",
+        "es": "Compromiso inicial",
+        "pl": "początkowe zatwierdzenie",
+        "zh-cn": "初始提交"
+      }
+    },
+    "title": "vis-widgets-react-template.org",
+    "titleLang": {
+      "en": "Vis-Widget template",
+      "de": "Vis-Widget template",
+      "ru": "Vis-Widget template",
+      "pt": "Vis-Widget template",
+      "nl": "Vis-Widget template",
+      "fr": "Vis-Widget template",
+      "it": "Vis-Widget template",
+      "es": "Vis-Widget template",
+      "pl": "Vis-Widget template",
+      "zh-cn": "Vis-Widget template"
+    },
+    "desc": {
+      "en": "Vis-Widget template",
+      "de": "Vis-Widget template",
+      "ru": "Vis-Widget template",
+      "pt": "Vis-Widget template",
+      "nl": "Vis-Widget template",
+      "fr": "Vis-Widget template",
+      "it": "Vis-Widget template",
+      "es": "Vis-Widget template",
+      "pl": "Vis-Widget template",
+      "zh-cn": "Vis-Widget template"
+    },
+    "authors": [
+      "bluefox <dogafox@gmail.com>"
+    ],
+    "keywords": [
+      "vis-widgets-react-template"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "icon": "vis-widgets-react-template.png",
+    "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-widgets-react-template/master/admin/vis-widgets-react-template.png",
+    "enabled": true,
+    "readme": "https://github.com/ioBroker/ioBroker.vis-widgets-react-template/blob/master/README.md",
+    "loglevel": "info",
+    "mode": "schedule",
+    "adminUI": {
+      "config": "none"
+    },
+    "onlyWWW": true,
+    "type": "visualization-widgets",
+    "connectionType": "cloud",
+    "dataSource": "poll",
+    "visWidgets": {
+      "DemoWidget": {
+        "name": "DemoWidget",
+        "url": "vis-widgets-react-template/customWidgets.js",
+        "components": [
+          "DemoWidget"
+        ]
+      }
+    }
+  },
+  "native": {
+
+  },
+  "objects": [],
+  "instanceObjects": []
+}
