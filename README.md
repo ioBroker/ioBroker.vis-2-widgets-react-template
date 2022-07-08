@@ -5,11 +5,13 @@ After all entries with vis-widgets-react-template are replaced to your adapter n
 and file admin/ vis-widgets-react-template.png renamed too, you can start with renaming of widgets.
 
 Some important places:
-1. io-package.json => common.visWidgets
-2. src-widgets/modulefederation.config.js from Line 15
-3. File DemoWidget.jsx
+1. `io-package.json` => `common.visWidgets`
+2. `src-widgets/modulefederation.config.js` from Line 15
+3. File `DemoWidget.jsx`
 
 Files in directory `src-widgets` (`App.jsx`, `bootstrap.jsx`, `index.jsx`) are only for development mode and will not be used in production. 
+
+By development, you can start script from `src-widgets` folder `npm run start` and then on port 4173 you will see the demo widget.
 
 ## Changelog
 
