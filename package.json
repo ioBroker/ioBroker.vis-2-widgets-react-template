@@ -1,25 +1,23 @@
 {
-  "name": "iobroker.vis-widgets-react-template",
+  "name": "iobroker.vis-2-widgets-react-template",
   "version": "0.1.0",
   "description": "ioBroker vis widget demo",
   "author": "bluefox <dogafox@gmail.com>",
   "contributors": [
     "bluefox <dogafox@gmail.com>"
   ],
-  "homepage": "https://github.com/ioBroker/ioBroker.vis-widgets-react-template",
+  "homepage": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ioBroker/ioBroker.vis-widgets-react-template"
+    "url": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template"
   },
   "engines": {
     "node": ">=12.0.0"
   },
   "keywords": [
     "ioBroker",
-    "weather",
-    "home automation",
-    "vis-widgets-react-template"
+    "visualization"
   ],
   "dependencies": {
     "@iobroker/adapter-core": "^2.6.0"
@@ -64,7 +62,7 @@
     "release-major": "release-script major --yes"
   },
   "bugs": {
-    "url": "https://github.com/ioBroker/ioBroker.vis-widgets-react-template/issues"
+    "url": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template/issues"
   },
   "readmeFilename": "README.md"
 }

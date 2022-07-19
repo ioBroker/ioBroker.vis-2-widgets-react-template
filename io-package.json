@@ -1,6 +1,6 @@
 {
   "common": {
-    "name": "vis-widgets-react-template",
+    "name": "vis-2-widgets-react-template",
     "version": "0.1.0",
     "news": {
       "0.1.0": {
@@ -16,7 +16,7 @@
         "zh-cn": "初始提交"
       }
     },
-    "title": "vis-widgets-react-template.org",
+    "title": "vis-2-widgets-react-template.org",
     "titleLang": {
       "en": "Vis-Widget template",
       "de": "Vis-Widget template",
@@ -45,14 +45,14 @@
       "bluefox <dogafox@gmail.com>"
     ],
     "keywords": [
-      "vis-widgets-react-template"
+      "vis-2-widgets-react-template"
     ],
     "license": "MIT",
     "platform": "Javascript/Node.js",
-    "icon": "vis-widgets-react-template.png",
-    "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-widgets-react-template/master/admin/vis-widgets-react-template.png",
+    "icon": "vis-2-widgets-react-template.png",
+    "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-react-template/master/admin/vis-2-widgets-react-template.png",
     "enabled": true,
-    "readme": "https://github.com/ioBroker/ioBroker.vis-widgets-react-template/blob/master/README.md",
+    "readme": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template/blob/master/README.md",
     "loglevel": "info",
     "mode": "schedule",
     "adminUI": {
@@ -65,7 +65,7 @@
     "visWidgets": {
       "DemoWidget": {
         "name": "DemoWidget",
-        "url": "vis-widgets-react-template/customWidgets.js",
+        "url": "vis-2-widgets-react-template/customWidgets.js",
         "components": [
           "DemoWidget"
         ]
