@@ -1,30 +1,8 @@
-const makeShared = pkgs => {
-    const result = {};
-    pkgs.forEach(
-        packageName => {
-            result[packageName] = {
-                requiredVersion: '*',
-                singleton: true,
-            };
-        },
-    );
-    return result;
-};
+const makeFederation = require('@iobroker/vis-widgets-react-dev/modulefederation.config');
 
-module.exports = {
-    name: 'DemoWidget',
-    filename: 'customWidgets.js',
-    exposes: {
+module.exports = makeFederation(
+    'DemoWidget',
+    {
         './DemoWidget': './src/DemoWidget',
     },
-    shared:
-        makeShared([
-            'react',
-            'react-dom',
-            '@mui/material',
-            '@mui/styles',
-            '@mui/icons-material',
-            'prop-types',
-            '@iobroker/adapter-react-v5',
-        ]),
-};
+);
