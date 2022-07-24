@@ -5,8 +5,8 @@
     "dependencies": {
         "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.9.3",
-        "@iobroker/adapter-react-v5": "^3.1.21",
-        "@iobroker/vis-widgets-react-dev": "^0.1.5",
+        "@iobroker/adapter-react-v5": "^3.1.22",
+        "@iobroker/vis-widgets-react-dev": "^0.2.1",
         "@mui/icons-material": "^5.8.4",
         "@mui/material": "^5.8.7",
         "@mui/styles": "^5.8.7",
@@ -21,11 +21,9 @@
     },
     "scripts": {
         "start": "set PORT=4173 && craco start",
-        "old-start": "set PORT=4173 && react-scripts start",
         "lint": "eslint --fix --ext .js,.jsx src",
         "build": "craco build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "i18n": "node node_modules/@iobroker/vis-widgets-react-dev/searchI18n vis-2-widgets-material"
     },
     "eslintConfig": {
         "extends": "react-app"

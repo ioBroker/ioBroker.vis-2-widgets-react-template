@@ -63,7 +63,7 @@
     "connectionType": "cloud",
     "dataSource": "poll",
     "visWidgets": {
-      "DemoWidget": {
+      "vis2demoWidget": {
         "name": "DemoWidget",
         "url": "vis-2-widgets-react-template/customWidgets.js",
         "components": [

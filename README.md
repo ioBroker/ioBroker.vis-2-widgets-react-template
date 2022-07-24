@@ -1,17 +1,21 @@
 # Vis React Widget Template
 
 ## Development
-After all entries with vis-widgets-react-template are replaced to your adapter name in package.json, io-package.json 
-and file admin/ vis-widgets-react-template.png renamed too, you can start with renaming of widgets.
+After all entries with `vis-widgets-react-template` are replaced to your adapter name in `package.json`, `io-package.json` 
+and file `admin/vis-widgets-react-template.png` renamed too, you can start with renaming of widgets.
 
 Some important places:
 1. `io-package.json` => `common.visWidgets`
-2. `src-widgets/modulefederation.config.js` from Line 15
+2. `src-widgets/modulefederation.config.js` from line 4
 3. File `DemoWidget.jsx`
 
 Files in directory `src-widgets` (`App.jsx`, `bootstrap.jsx`, `index.jsx`) are only for development mode and will not be used in production. 
 
 By development, you can start script from `src-widgets` folder `npm run start` and then on port 4173 you will see the demo widget.
+For faster development you can:
+- start in src-widgets: `npm run start`
+- write in object `system.adapter.vis-widgets-react-template.0`=>`common.visWidgets.vis2demoWidget.url` to `http://localhost:4173/customWidgets.js`
+- Press F5 in `iobroker.vis` web page
 
 ## Changelog
 
