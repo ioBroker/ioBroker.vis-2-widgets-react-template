@@ -6,7 +6,7 @@
         "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.10.0",
         "@iobroker/adapter-react-v5": "^3.1.22",
-        "@iobroker/vis-widgets-react-dev": "^0.2.1",
+        "@iobroker/vis-widgets-react-dev": "^0.2.2",
         "@mui/icons-material": "^5.8.4",
         "@mui/material": "^5.9.2",
         "@mui/styles": "^5.9.2",
@@ -35,7 +35,7 @@
         "eslint": "^8.20.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-plugin-import": "^2.26.0",
-        "eslint-plugin-jsx-a11y": "^6.6.0",
+        "eslint-plugin-jsx-a11y": "^6.6.1",
         "eslint-plugin-react": "^7.30.1",
         "eslint-plugin-react-hooks": "^4.6.0",
         "sass": "^1.53.0"
