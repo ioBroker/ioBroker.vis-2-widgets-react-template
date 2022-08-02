@@ -4,7 +4,7 @@ import {
 } from '@mui/material';
 
 import { i18n as I18n } from '@iobroker/adapter-react-v5';
-import VisRxWidget from '@iobroker/vis-widgets-react-dev/visRxWidget';
+import VisRxWidget from '@iobroker/vis-2-widgets-react-dev/visRxWidget';
 
 class DemoWidget extends (window.visRxWidget || VisRxWidget) {
     static getWidgetInfo() {
