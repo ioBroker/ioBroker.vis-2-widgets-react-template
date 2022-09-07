@@ -1,4 +1,7 @@
-# Vis React Widget Template
+![Logo](admin/vis-2-widgets-react-template.png)
+# Vis 2 Energy widgets
+
+This is only for development purposes, and it could be used as basis for own widgets' development.
 
 ## Development
 After all entries with `vis-widgets-react-template` are replaced to your adapter name in `package.json`, `io-package.json` 
@@ -14,10 +17,15 @@ Files in directory `src-widgets` (`App.jsx`, `bootstrap.jsx`, `index.jsx`) are o
 By development, you can start script from `src-widgets` folder `npm run start` and then on port 4173 you will see the demo widget.
 For faster development you can:
 - start in src-widgets: `npm run start`
-- write in object `system.adapter.vis-widgets-react-template.0`=>`common.visWidgets.vis2demoWidget.url` to `http://localhost:4173/customWidgets.js`
+- write in object `system.adapter.vis-widgets-react-template.0`=>`common.visWidgets.vis2DemoWidget.url` to `http://localhost:4173/customWidgets.js`
 - Press F5 in `iobroker.vis` web page
 
+<!--
+    ### **WORK IN PROGRESS**
+-->
 ## Changelog
+### **WORK IN PROGRESS**
+* (bluefox) Initial commit
 
 ## License
 The MIT License (MIT)
