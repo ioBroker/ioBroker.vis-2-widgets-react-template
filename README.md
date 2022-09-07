@@ -24,7 +24,7 @@ For faster development you can:
     ### **WORK IN PROGRESS**
 -->
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.1.1 (2022-09-07)
 * (bluefox) Initial commit
 
 ## License
