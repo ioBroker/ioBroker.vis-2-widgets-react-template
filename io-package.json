@@ -64,8 +64,8 @@
     "dataSource": "poll",
     "visWidgets": {
       "i18n": "component",
-      "vis2demoWidget": {
-        "name": "DemoWidget",
+      "vis2DemoWidget": {
+        "name": "vis2DemoWidget",
         "url": "vis-2-widgets-react-template/customWidgets.js",
         "components": [
           "DemoWidget"

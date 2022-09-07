@@ -1,3 +1,7 @@
 {
-  "My Demo widget": "Il mio widget demo"
+  "My Demo widget: ": "Il mio widget demo:",
+  "vis_2_widgets_template": "Modello di widget",
+  "vis_2_widgets_template_oid": "ID oggetto",
+  "vis_2_widgets_template_private": "Privato",
+  "vis_2_widgets_template_type": "Tipo"
 }

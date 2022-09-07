@@ -1,3 +1,7 @@
 {
-  "My Demo widget": "Mein Demo-Widget"
+  "My Demo widget: ": "Mein Demo-Widget:",
+  "vis_2_widgets_template": "Widgets-Vorlage",
+  "vis_2_widgets_template_oid": "Objekt Identifikation",
+  "vis_2_widgets_template_private": "Privatgelände",
+  "vis_2_widgets_template_type": "Typ"
 }
