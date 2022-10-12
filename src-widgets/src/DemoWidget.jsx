@@ -77,12 +77,17 @@ class DemoWidget extends (window.visRxWidget || VisRxWidget) {
 
     }
 
+    // This function is called every time when some Object State updated, but all changes lands into this.state.values too
+    onStateUpdated(id, state) {
+
+    }
+
     renderWidgetBody(props) {
         super.renderWidgetBody(props);
 
         return <Card style={{ width: '100%', height: '100%' }}>
             <CardContent>
-                {I18n.t('My Demo widget: ')}
+                {I18n.t('My Demo ioBroker: ')}
                 {this.state.values[this.state.rxData.oid + '.val']}
             </CardContent>
         </Card>;
