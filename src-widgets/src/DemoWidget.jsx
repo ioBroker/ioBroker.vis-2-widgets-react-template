@@ -35,7 +35,7 @@ class DemoWidget extends (window.visRxWidget || VisRxWidget) {
                             name: 'oid',     // name in data structure
                             type: 'id',
                             label: 'vis_2_widgets_template_oid', // translated field label
-                        }
+                        },
                     ],
                 },
                 // check here all possible types https://github.com/ioBroker/ioBroker.vis/blob/react/src/src/Attributes/Widget/SCHEMA.md
