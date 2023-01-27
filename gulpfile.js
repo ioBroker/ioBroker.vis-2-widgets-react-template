@@ -7,12 +7,26 @@
 const gulp = require('gulp');
 const fs = require('fs');
 const cp = require('child_process');
-const del = require('del');
 const adapterName = require('./package.json').name.replace('iobroker.', '');
 
 const SRC = 'src-widgets/';
-const src = __dirname + '/' + SRC;
+const src = `${__dirname}/${SRC}`;
 
+function deleteFoldersRecursive(path) {
+    if (fs.existsSync(path)) {
+        const files = fs.readdirSync(path);
+        for (const file of files) {
+            const curPath = `${path}/${file}`;
+            const stat = fs.statSync(curPath);
+            if (stat.isDirectory()) {
+                deleteFoldersRecursive(curPath);
+                fs.rmdirSync(curPath);
+            } else {
+                fs.unlinkSync(curPath);
+            }
+        }
+    }
+}
 function npmInstall() {
     return new Promise((resolve, reject) => {
         // Install node modules
@@ -77,8 +91,11 @@ function buildRules() {
     });
 }
 
-gulp.task('widget-0-clean', () => del([`${SRC}build/**/*`, `widgets/**/*`]));
-
+gulp.task('widget-0-clean', done => {
+    deleteFoldersRecursive(`${src}build`);
+    deleteFoldersRecursive(`${src}widgets`);
+    done();
+});
 gulp.task('widget-1-npm', async () => npmInstall());
 
 gulp.task('widget-2-compile', async () => buildRules());
