@@ -64,10 +64,19 @@ function buildRules() {
 
     fs.writeFileSync(`${src}package.json`, JSON.stringify(data, null, 4));
 
+    // we have bug, that federation requires version number in @mui/material/styles, so we have to change it
+    // read version of @mui/material and write it to @mui/material/styles
+    const muiStyleVersion = require(`${src}node_modules/@mui/material/styles/package.json`);
+    if (!muiStyleVersion.version) {
+        const muiVersion = require(`${src}node_modules/@mui/material/package.json`);
+        muiStyleVersion.version = muiVersion.version;
+        fs.writeFileSync(`${src}node_modules/@mui/material/styles/package.json`, JSON.stringify(muiStyleVersion, null, 2));
+    }
+
     return new Promise((resolve, reject) => {
         const options = {
             stdio: 'pipe',
-            cwd: src
+            cwd: src,
         };
 
         console.log(options.cwd);
