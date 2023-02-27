@@ -12,11 +12,15 @@ const adapterName = require('./package.json').name.replace('iobroker.', '');
 const SRC = 'src-widgets/';
 const src = `${__dirname}/${SRC}`;
 
-function deleteFoldersRecursive(path) {
+function deleteFoldersRecursive(path, exceptions) {
     if (fs.existsSync(path)) {
         const files = fs.readdirSync(path);
         for (const file of files) {
             const curPath = `${path}/${file}`;
+            if (exceptions && exceptions.find(e => curPath.endsWith(e))) {
+                continue;
+            }
+
             const stat = fs.statSync(curPath);
             if (stat.isDirectory()) {
                 deleteFoldersRecursive(curPath);
@@ -27,6 +31,7 @@ function deleteFoldersRecursive(path) {
         }
     }
 }
+
 function npmInstall() {
     return new Promise((resolve, reject) => {
         // Install node modules
