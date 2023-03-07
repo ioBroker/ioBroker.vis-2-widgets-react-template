@@ -3,7 +3,7 @@ import {
     Card, CardContent,
 } from '@mui/material';
 
-import { i18n as I18n } from '@iobroker/adapter-react-v5';
+import { I18n } from '@iobroker/adapter-react-v5';
 import { VisRxWidget } from '@iobroker/vis-2-widgets-react-dev';
 
 class DemoWidget extends (window.visRxWidget || VisRxWidget) {
@@ -88,7 +88,7 @@ class DemoWidget extends (window.visRxWidget || VisRxWidget) {
         return <Card style={{ width: '100%', height: '100%' }}>
             <CardContent>
                 {I18n.t('My Demo ioBroker: ')}
-                {this.state.values[this.state.rxData.oid + '.val']}
+                {this.state.values[`${this.state.rxData.oid}.val`]}
             </CardContent>
         </Card>;
     }
