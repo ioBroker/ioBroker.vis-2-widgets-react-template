@@ -44,6 +44,7 @@ class DemoWidget extends (window.visRxWidget || VisRxWidget) {
         };
     }
 
+    // eslint-disable-next-line class-methods-use-this
     propertiesUpdate() {
         // Widget has 3 important states
         // 1. this.state.values - contains all state values, that are used in widget (automatically collected from widget info).
@@ -73,11 +74,13 @@ class DemoWidget extends (window.visRxWidget || VisRxWidget) {
     }
 
     // This function is called every time when rxStyle is changed
+    // eslint-disable-next-line class-methods-use-this
     onRxStyleChanged() {
 
     }
 
     // This function is called every time when some Object State updated, but all changes lands into this.state.values too
+    // eslint-disable-next-line class-methods-use-this, no-unused-vars
     onStateUpdated(id, state) {
 
     }
