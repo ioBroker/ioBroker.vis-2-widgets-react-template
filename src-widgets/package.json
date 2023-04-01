@@ -18,7 +18,7 @@
         "react-dom": "^18.2.0",
         "react-icons": "^4.8.0",
         "react-scripts": "^5.0.1",
-        "@craco/craco": "^7.0.0",
+        "@craco/craco": "^7.1.0",
         "craco-esbuild": "^0.5.2",
         "craco-module-federation": "^1.1.0",
         "eslint": "^8.35.0",
