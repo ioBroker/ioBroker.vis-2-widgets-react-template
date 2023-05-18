@@ -10,13 +10,13 @@ describe('vis-2-widgets-react-template', () => {
         await helper.createProject();
 
         // open widgets
-        await helper.palette.openWidgetSet(null, adapterName);
+        await helper.palette.openWidgetSet(null, 'demo');
         await helper.screenshot(null, '02_widgets_opened');
     });
 
     it('Check all widgets', async function (){
         this.timeout(60000);
-        const widgets = await helper.palette.getListOfWidgets(null, adapterName);
+        const widgets = await helper.palette.getListOfWidgets(null, 'demo');
         for (let w = 0; w < widgets.length; w++) {
             const wid = await helper.palette.addWidget(null, widgets[w], true);
             await helper.screenshot(null, `10_${widgets[w]}`);
