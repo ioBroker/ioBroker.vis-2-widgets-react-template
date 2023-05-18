@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "vis-2-widgets-react-template",
-    "version": "0.1.6",
+    "version": "0.2.0",
     "news": {
+      "0.2.0": {
+        "en": "Added CI tests",
+        "de": "CI-Tests",
+        "ru": "Добавлены CI тесты",
+        "pt": "Adicionados testes de IC",
+        "nl": "Toegevoegd CI testen",
+        "fr": "Essais CI ajoutés",
+        "it": "Test CI aggiunti",
+        "es": "Pruebas de CI adicionales",
+        "pl": "Added CI test",
+        "uk": "Додано тести CI",
+        "zh-cn": "增加CI试验"
+      },
       "0.1.6": {
         "en": "update packages",
         "de": "update-pakete",
@@ -79,18 +92,6 @@
         "es": "Composición inicial",
         "pl": "Śledczy",
         "zh-cn": "初始承诺"
-      },
-      "0.1.0": {
-        "en": "initial commit",
-        "de": "anfängliches Commit",
-        "ru": "начальная фиксация",
-        "pt": "commit inicial",
-        "nl": "initiële commit",
-        "fr": "validation initiale",
-        "it": "impegno iniziale",
-        "es": "Compromiso inicial",
-        "pl": "początkowe zatwierdzenie",
-        "zh-cn": "初始提交"
       }
     },
     "title": "vis-2-widgets-react-template.org",
