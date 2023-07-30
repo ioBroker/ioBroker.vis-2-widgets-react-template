@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "vis-2-widgets-react-template",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "news": {
+      "0.2.1": {
+        "en": "update packages",
+        "de": "update-pakete",
+        "ru": "обновление пакетов",
+        "pt": "pacotes de atualização",
+        "nl": "vertaling:",
+        "fr": "mettre à jour les paquets",
+        "it": "pacchetti di aggiornamento",
+        "es": "actualizar paquetes",
+        "pl": "pakiet aktualizacji",
+        "uk": "оновлення пакетів",
+        "zh-cn": "更新包"
+      },
       "0.2.0": {
         "en": "Added CI tests",
         "de": "CI-Tests",
@@ -80,18 +93,6 @@
         "pl": "Pakiety zostały zaktualizowane",
         "uk": "Пакети оновлено",
         "zh-cn": "包装更新"
-      },
-      "0.1.1": {
-        "en": "Initial commit",
-        "de": "Ursprüngliche Verpflichtung",
-        "ru": "Первоначальный коммит",
-        "pt": "Compromisso inicial",
-        "nl": "Initiatief",
-        "fr": "Engagement initial",
-        "it": "Impegno iniziale",
-        "es": "Composición inicial",
-        "pl": "Śledczy",
-        "zh-cn": "初始承诺"
       }
     },
     "title": "vis-2-widgets-react-template.org",

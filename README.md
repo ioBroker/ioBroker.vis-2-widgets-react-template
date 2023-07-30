@@ -26,7 +26,7 @@ For faster development, you can:
     ### **WORK IN PROGRESS**
 -->
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.2.1 (2023-07-30)
 * (bluefox) update packages
 
 ### 0.2.0 (2023-05-18)
