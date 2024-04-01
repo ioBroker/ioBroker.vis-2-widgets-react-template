@@ -26,7 +26,7 @@
     "@iobroker/vis-2-widgets-react-dev": "^1.0.1",
     "@iobroker/vis-2-widgets-testing": "^0.3.0",
     "gulp": "^4.0.2",
-    "mocha": "^10.2.0"
+    "mocha": "^10.4.0"
   },
   "main": "widgets/vis-2-widgets-react-template/customWidgets.js",
   "files": [
