@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "vis-2-widgets-react-template",
-    "version": "0.2.1",
+    "version": "1.0.0",
     "news": {
+      "1.0.0": {
+        "en": "updated packages",
+        "de": "aktualisierte pakete",
+        "ru": "обновления пакетов",
+        "pt": "pacotes atualizados",
+        "nl": "bijgewerkte pakketten",
+        "fr": "paquets mis à jour",
+        "it": "pacchetti aggiornati",
+        "es": "paquetes actualizados",
+        "pl": "zaktualizowane pakiety",
+        "uk": "оновлені пакети",
+        "zh-cn": "更新软件包"
+      },
       "0.2.1": {
         "en": "update packages",
         "de": "update-pakete",
@@ -80,19 +93,6 @@
         "pl": "pakiet aktualizacji",
         "uk": "оновлення пакетів",
         "zh-cn": "更新包"
-      },
-      "0.1.2": {
-        "en": "Packages were updated",
-        "de": "Pakete wurden aktualisiert",
-        "ru": "Пакеты были обновлены",
-        "pt": "Pacotes foram atualizados",
-        "nl": "Packages werden geüpload",
-        "fr": "Les paquets ont été mis à jour",
-        "it": "I pacchetti sono stati aggiornati",
-        "es": "Se actualizaron los paquetes",
-        "pl": "Pakiety zostały zaktualizowane",
-        "uk": "Пакети оновлено",
-        "zh-cn": "包装更新"
       }
     },
     "title": "vis-2-widgets-react-template.org",
