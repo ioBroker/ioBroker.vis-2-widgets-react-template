@@ -26,6 +26,9 @@ For faster development, you can:
     ### **WORK IN PROGRESS**
 -->
 ## Changelog
+### **WORK IN PROGRESS**
+* (bluefox) updated packages
+
 ### 0.2.1 (2023-07-30)
 * (bluefox) update packages
 
@@ -44,7 +47,7 @@ For faster development, you can:
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2022-2023 bluefox <dogafox@gmail.com>
+Copyright (c) 2022-2024 bluefox <dogafox@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -138,6 +138,11 @@
       "config": "none"
     },
     "onlyWWW": true,
+    "licenseInformation": {
+      "type": "free",
+      "license": "MIT"
+    },
+    "tier": 3,
     "type": "visualization-widgets",
     "connectionType": "cloud",
     "dataSource": "poll",
