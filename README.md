@@ -26,7 +26,7 @@ For faster development, you can:
     ### **WORK IN PROGRESS**
 -->
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.0.1 (2024-07-13)
 * (oweitman) changed the node version from 16 to 20 in test and release workflow
 * (bluefox) updated packages
 
