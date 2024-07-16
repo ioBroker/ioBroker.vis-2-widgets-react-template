@@ -3,7 +3,6 @@ import {
     Card, CardContent,
 } from '@mui/material';
 
-import { I18n } from '@iobroker/adapter-react-v5';
 import { VisRxWidget } from '@iobroker/vis-2-widgets-react-dev';
 
 class DemoWidget extends (window.visRxWidget || VisRxWidget) {
@@ -11,8 +10,8 @@ class DemoWidget extends (window.visRxWidget || VisRxWidget) {
         return {
             id: 'tplDemoWidget',
             visSet: 'demo',
-            visSetLabel: 'vis_2_widgets_template', // Widget set translated label (should be defined only in one widget of set)
-            visSetColor: '#cf00ff',                // Color of widget set. it is enough to set color only in one widget of set
+            visSetLabel: 'vis_2_widgets_template', // Widget set translated label (should be defined only in one widget of a set)
+            visSetColor: '#cf00ff',                // Color of a widget set. it is enough to set color only in one widget of a set
             visName: 'DemoWidget',                 // Name of widget
             visAttrs: [
                 {
@@ -20,7 +19,7 @@ class DemoWidget extends (window.visRxWidget || VisRxWidget) {
                     fields: [
                         {
                             name: 'type',    // name in data structure
-                            label: 'vis_2_widgets_template_type', // translated field label
+                            label: 'type',   // translated field label
                             type: 'select',
                             options: ['all', 'current', 'days'],
                             default: 'all',
@@ -29,12 +28,12 @@ class DemoWidget extends (window.visRxWidget || VisRxWidget) {
                 },
                 {
                     name: 'private', // group name
-                    label: 'vis_2_widgets_template_private', // translated group label
+                    label: 'private', // translated group label
                     fields: [
                         {
                             name: 'oid',     // name in data structure
                             type: 'id',
-                            label: 'vis_2_widgets_template_oid', // translated field label
+                            label: 'oid', // translated field label
                         },
                     ],
                 },
@@ -46,9 +45,9 @@ class DemoWidget extends (window.visRxWidget || VisRxWidget) {
 
     // eslint-disable-next-line class-methods-use-this
     propertiesUpdate() {
-        // Widget has 3 important states
+        // The widget has 3 important states
         // 1. this.state.values - contains all state values, that are used in widget (automatically collected from widget info).
-        //                        So you can use `this.state.values[this.state.rxData.oid + '.val']` to get value of state with id this.state.rxData.oid
+        //                        So you can use `this.state.values[this.state.rxData.oid + '.val']` to get the value of state with id this.state.rxData.oid
         // 2. this.state.rxData - contains all widget data with replaced bindings. E.g. if this.state.data.type is `{system.adapter.admin.0.alive}`,
         //                        then this.state.rxData.type will have state value of `system.adapter.admin.0.alive`
         // 3. this.state.rxStyle - contains all widget styles with replaced bindings. E.g. if this.state.styles.width is `{javascript.0.width}px`,
@@ -60,6 +59,11 @@ class DemoWidget extends (window.visRxWidget || VisRxWidget) {
 
         // Update data
         this.propertiesUpdate();
+    }
+
+    // To not write before every label "vis_2_widgets_template_" we can use this method
+    static getI18nPrefix() {
+        return 'vis_2_widgets_template_';
     }
 
     // Do not delete this method. It is used by vis to read the widget configuration.
@@ -88,9 +92,12 @@ class DemoWidget extends (window.visRxWidget || VisRxWidget) {
     renderWidgetBody(props) {
         super.renderWidgetBody(props);
 
+        const text = DemoWidget.t('My Demo widget:');
+
         return <Card style={{ width: '100%', height: '100%' }}>
             <CardContent>
-                {I18n.t('My Demo ioBroker: ')}
+                {text}
+                {' '}
                 {this.state.values[`${this.state.rxData.oid}.val`]}
             </CardContent>
         </Card>;

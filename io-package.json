@@ -1,8 +1,34 @@
 {
   "common": {
     "name": "vis-2-widgets-react-template",
-    "version": "0.2.1",
+    "version": "1.0.1",
     "news": {
+      "1.0.1": {
+        "en": "changed the node version from 16 to 20 in test and release workflow\nupdated packages",
+        "de": "die knotenversion von 16 auf 20 im test- und release-workflow geändert\naktualisierte pakete",
+        "ru": "изменил версию узла с 16 до 20 в тесте и выпуске рабочего процесса\nобновления пакетов",
+        "pt": "mudou a versão do nó de 16 a 20 em fluxo de trabalho de teste e lançamento\npacotes atualizados",
+        "nl": "veranderde de node versie van 16 naar 20 in test en release workflow\nbijgewerkte pakketten",
+        "fr": "a changé la version du nœud de 16 à 20 dans le flux de travail de test et de publication\npaquets mis à jour",
+        "it": "ha cambiato la versione nodo da 16 a 20 in prova e il flusso di lavoro di rilascio\npacchetti aggiornati",
+        "es": "cambió la versión del nodo de 16 a 20 en el flujo de trabajo de prueba y liberación\npaquetes actualizados",
+        "pl": "zmienił wersję węzła z 16 do 20 w pracy testowej i zwalniającej\nzaktualizowane pakiety",
+        "uk": "змінено версію вузла від 16 до 20 у тестовому режимі\nоновлені пакети",
+        "zh-cn": "在测试和发布工作流程中将节点版本从16个改为20个\n更新软件包"
+      },
+      "1.0.0": {
+        "en": "updated packages",
+        "de": "aktualisierte pakete",
+        "ru": "обновления пакетов",
+        "pt": "pacotes atualizados",
+        "nl": "bijgewerkte pakketten",
+        "fr": "paquets mis à jour",
+        "it": "pacchetti aggiornati",
+        "es": "paquetes actualizados",
+        "pl": "zaktualizowane pakiety",
+        "uk": "оновлені пакети",
+        "zh-cn": "更新软件包"
+      },
       "0.2.1": {
         "en": "update packages",
         "de": "update-pakete",
@@ -67,32 +93,6 @@
         "pl": "pakiet aktualizacji",
         "uk": "оновлення пакетів",
         "zh-cn": "更新包"
-      },
-      "0.1.3": {
-        "en": "update packages",
-        "de": "update-pakete",
-        "ru": "обновление пакетов",
-        "pt": "pacotes de atualização",
-        "nl": "vertaling:",
-        "fr": "mettre à jour les paquets",
-        "it": "pacchetti di aggiornamento",
-        "es": "actualizar paquetes",
-        "pl": "pakiet aktualizacji",
-        "uk": "оновлення пакетів",
-        "zh-cn": "更新包"
-      },
-      "0.1.2": {
-        "en": "Packages were updated",
-        "de": "Pakete wurden aktualisiert",
-        "ru": "Пакеты были обновлены",
-        "pt": "Pacotes foram atualizados",
-        "nl": "Packages werden geüpload",
-        "fr": "Les paquets ont été mis à jour",
-        "it": "I pacchetti sono stati aggiornati",
-        "es": "Se actualizaron los paquetes",
-        "pl": "Pakiety zostały zaktualizowane",
-        "uk": "Пакети оновлено",
-        "zh-cn": "包装更新"
       }
     },
     "title": "vis-2-widgets-react-template.org",
@@ -138,6 +138,11 @@
       "config": "none"
     },
     "onlyWWW": true,
+    "licenseInformation": {
+      "type": "free",
+      "license": "MIT"
+    },
+    "tier": 3,
     "type": "visualization-widgets",
     "connectionType": "cloud",
     "dataSource": "poll",

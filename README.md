@@ -26,6 +26,13 @@ For faster development, you can:
     ### **WORK IN PROGRESS**
 -->
 ## Changelog
+### 1.0.1 (2024-07-13)
+* (oweitman) changed the node version from 16 to 20 in test and release workflow
+* (bluefox) updated packages
+
+### 1.0.0 (2024-07-10)
+* (bluefox) updated packages
+
 ### 0.2.1 (2023-07-30)
 * (bluefox) update packages
 
@@ -44,7 +51,7 @@ For faster development, you can:
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2022-2023 bluefox <dogafox@gmail.com>
+Copyright (c) 2022-2024 bluefox <dogafox@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
