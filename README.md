@@ -3,22 +3,27 @@
 
 This is only for development purposes, and it could be used as a basis for own vis-2 widgets' development.
 
+This example consists of two projects: JavaScript (src-widgets-js) and TypeScript (src-widgets-ts).
+
+** The typescript project is not yet finished! If someone can fix it. You are welcome. **
+
+
 ## Development
 After all entries with `vis-widgets-react-template` are replaced to your adapter name in `package.json`, `io-package.json` 
 and file `admin/vis-widgets-react-template.png` renamed too, you can start with renaming of widgets.
 
 Some important places:
 1. `io-package.json` => `common.visWidgets`
-2. `src-widgets/modulefederation.config.js` from line 4
+2. `src-widgets-js/modulefederation.config.js` from line 4
 3. File `DemoWidget.jsx`
 
-Files in directory `src-widgets` (`App.jsx`, `bootstrap.jsx`, `index.jsx`) are only for development mode and will not be used in production. 
+Files in directory `src-widgets-js` (`App.tsx`, `bootstrap.jsx`, `index.js`) are only for development mode and will not be used in production. 
 
-By development, you can start the script from `src-widgets` folder with `npm run start` command,
+By development, you can start the script from `src-widgets-js` folder with `npm run start` command,
 and then on port 4173 you will see the demo widget.
 
 For faster development, you can:
-- start in src-widgets: `npm run start`
+- start in src-widgets-js: `npm run start`
 - write in object `system.adapter.vis-widgets-react-template.0`=>`common.visWidgets.vis2DemoWidget.url` to `http://localhost:4173/customWidgets.js`
 - Press F5 in `iobroker.vis` web page
 
