@@ -1,1 +1,1 @@
-import './bootstrap.tsx';
+// nothing here

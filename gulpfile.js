@@ -22,7 +22,7 @@ gulp.task('widget-js-3-copy', () => Promise.all([
     gulp.src([`${SRC_JS}build/*.map`]).pipe(gulp.dest(`widgets/${adapterName}`)),
     gulp.src([
         `${SRC_JS}build/static/**/*`,
-        ...gulpHelper.ignoreFiles(SRC_JS),
+        // ...gulpHelper.ignoreFiles(SRC_JS),
     ]).pipe(gulp.dest(`widgets/${adapterName}/static`)),
     gulp.src([
         ...gulpHelper.copyFiles(SRC_JS),
@@ -62,7 +62,7 @@ gulp.task('widget-ts-3-copy', () => Promise.all([
     gulp.src([`${SRC_TS}build/*.map`]).pipe(gulp.dest(`widgets/${adapterName}`)),
     gulp.src([
         `${SRC_TS}build/static/**/*`,
-        ...gulpHelper.ignoreFiles(SRC_TS),
+        // ...gulpHelper.ignoreFiles(SRC_TS),
     ]).pipe(gulp.dest(`widgets/${adapterName}/static`)),
     gulp.src([
         ...gulpHelper.copyFiles(SRC_TS),

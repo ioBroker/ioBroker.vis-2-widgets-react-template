@@ -1,14 +1,92 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
     Card, CardContent,
 } from '@mui/material';
 
-import type { RxRenderWidgetProps } from '@iobroker/types-vis-2';
-import { VisRxWidget } from '@iobroker/vis-2-widgets-react-dev';
+import type {
+    RxRenderWidgetProps, VisBaseWidgetProps,
+    WidgetData, WidgetStyle,
+} from '@iobroker/types-vis-2';
 
-declare global {
-    interface Window {
-        visRxWidget?: typeof VisRxWidget;
+export type ResizeHandler = 'n' | 'e' | 's' | 'w' | 'nw' | 'ne' | 'sw' | 'se';
+
+export interface WidgetDataState extends WidgetData {
+    bindings: string[];
+    _originalData?: string;
+}
+
+export interface WidgetStyleState extends WidgetStyle {
+    bindings?: string[];
+    _originalData?: string;
+}
+
+export interface VisBaseWidgetState {
+    applyBindings?: false | true | { top: string | number; left: string | number };
+    data: WidgetDataState;
+    draggable?: boolean;
+    editMode: boolean;
+    gap?: number;
+    hideHelper?: boolean;
+    isHidden?: boolean;
+    multiViewWidget?: boolean;
+    resizable?: boolean;
+    resizeHandles?: ResizeHandler[];
+    rxStyle?: WidgetStyleState;
+    selected?: boolean;
+    selectedOne?: boolean;
+    showRelativeMoveMenu?: boolean;
+    style: WidgetStyleState;
+    usedInWidget: boolean;
+    widgetHint?: 'light' | 'dark' | 'hide';
+}
+
+class VisBaseWidget<TState extends Partial<VisBaseWidgetState> = VisBaseWidgetState> extends Component<VisBaseWidgetProps, TState & VisBaseWidgetState> {
+
+}
+
+interface VisRxData {
+    _originalData?: string;
+    filterkey?: string | string[];
+    /** If value is hide widget should be hidden if user not in groups, else disabled */
+    'visibility-groups-action': 'hide' | 'disabled';
+    /** If entry in an array but user not in array, apply visibility-groups-action logic */
+    'visibility-groups': string[];
+}
+
+export interface VisRxWidgetStateValues {
+    /** State value */
+    [values: `${string}.val`]: never;
+    /** State from */
+    [from: `${string}.from`]: string;
+    /** State timestamp */
+    [timestamp: `${string}.ts`]: number;
+    /** State last change */
+    [timestamp: `${string}.lc`]: number;
+}
+
+export interface VisRxWidgetState extends VisBaseWidgetState {
+    rxData: VisRxData;
+    values: VisRxWidgetStateValues;
+    visible: boolean;
+    disabled?: boolean;
+}
+
+class VisRxWidget<TRxData extends Record<string, any>, TState extends Partial<VisRxWidgetState> = VisRxWidgetState> extends VisBaseWidget<VisRxWidgetState & TState & { rxData: TRxData }> {
+    static t(text: string, ...args: (string | number | boolean)[]): string {
+        return text;
+    }
+
+    componentDidMount(): void {
+
+    }
+
+    componentWillUnmount() {
+
+    }
+
+    // eslint-disable-next-line class-methods-use-this
+    protected renderWidgetBody(_props: RxRenderWidgetProps): React.JSX.Element | null {
+        return null;
     }
 }
 
@@ -17,12 +95,18 @@ interface RxData {
     oid: string;
 }
 
+declare global {
+    interface Window {
+        visRxWidget: typeof VisRxWidget<RxData>;
+    }
+}
+
 // By minimal implementation of the widget, only 3 methods are required:
 // - getWidgetInfo (static and instance) - to define the widget properties
 // - renderWidgetBody - to render the widget
 // - getI18nPrefix - optional if you want to use translations, where the prefix added automatically
 
-class DemoWidget extends (window.visRxWidget || VisRxWidget)<RxData> {
+class DemoWidget extends window.visRxWidget {
     static getWidgetInfo() {
         return {
             id: 'tplDemoWidget',

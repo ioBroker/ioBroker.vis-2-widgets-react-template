@@ -3,9 +3,7 @@ import {
     Card, CardContent,
 } from '@mui/material';
 
-import { VisRxWidget } from '@iobroker/vis-2-widgets-react-dev';
-
-class DemoWidget extends (window.visRxWidget || VisRxWidget) {
+class DemoWidget extends window.visRxWidget {
     static getWidgetInfo() {
         return {
             id: 'tplDemoWidget',
