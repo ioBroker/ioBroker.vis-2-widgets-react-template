@@ -1,7 +1,7 @@
 ![Logo](admin/vis-2-widgets-react-template.svg)
-# Vis 2 Energy widgets
+# Vis 2 Demo widgets
 
-This is only for development purposes, and it could be used as a basis for own vis-2 widgets' development.
+This is only for development purposes, and it could be used as a basis for own vis-2 widget's development.
 
 This example consists of two projects: JavaScript (src-widgets-js) and TypeScript (src-widgets-ts).
 
