@@ -8,3 +8,4 @@ src-widgets-js/build
 src-widgets-ts/node_modules
 src-widgets-ts/package-lock.json
 src-widgets-ts/build
+src-widgets-ts/.__mf__temp

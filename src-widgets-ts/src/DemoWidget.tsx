@@ -1,126 +1,48 @@
-import React, { Component } from 'react';
-import {
-    Card, CardContent,
-} from '@mui/material';
+import React from 'react';
+import { Card, CardContent } from '@mui/material';
 
-import type {
-    RxRenderWidgetProps, VisBaseWidgetProps,
-    WidgetData, WidgetStyle,
-} from '@iobroker/types-vis-2';
+import type { RxRenderWidgetProps, RxWidgetInfo, VisRxWidgetProps, VisRxWidgetState } from '@iobroker/types-vis-2';
+import type VisRxWidget from '@iobroker/types-vis-2/visRxWidget';
 
-export type ResizeHandler = 'n' | 'e' | 's' | 'w' | 'nw' | 'ne' | 'sw' | 'se';
-
-export interface WidgetDataState extends WidgetData {
-    bindings: string[];
-    _originalData?: string;
+export interface DemoWidgetState extends VisRxWidgetState {
+    // Just to show how to use custom state type
+    customStateValue: string;
 }
 
-export interface WidgetStyleState extends WidgetStyle {
-    bindings?: string[];
-    _originalData?: string;
-}
-
-export interface VisBaseWidgetState {
-    applyBindings?: false | true | { top: string | number; left: string | number };
-    data: WidgetDataState;
-    draggable?: boolean;
-    editMode: boolean;
-    gap?: number;
-    hideHelper?: boolean;
-    isHidden?: boolean;
-    multiViewWidget?: boolean;
-    resizable?: boolean;
-    resizeHandles?: ResizeHandler[];
-    rxStyle?: WidgetStyleState;
-    selected?: boolean;
-    selectedOne?: boolean;
-    showRelativeMoveMenu?: boolean;
-    style: WidgetStyleState;
-    usedInWidget: boolean;
-    widgetHint?: 'light' | 'dark' | 'hide';
-}
-
-class VisBaseWidget<TState extends Partial<VisBaseWidgetState> = VisBaseWidgetState> extends Component<VisBaseWidgetProps, TState & VisBaseWidgetState> {
-
-}
-
-interface VisRxData {
-    _originalData?: string;
-    filterkey?: string | string[];
-    /** If value is hide widget should be hidden if user not in groups, else disabled */
-    'visibility-groups-action': 'hide' | 'disabled';
-    /** If entry in an array but user not in array, apply visibility-groups-action logic */
-    'visibility-groups': string[];
-}
-
-export interface VisRxWidgetStateValues {
-    /** State value */
-    [values: `${string}.val`]: never;
-    /** State from */
-    [from: `${string}.from`]: string;
-    /** State timestamp */
-    [timestamp: `${string}.ts`]: number;
-    /** State last change */
-    [timestamp: `${string}.lc`]: number;
-}
-
-export interface VisRxWidgetState extends VisBaseWidgetState {
-    rxData: VisRxData;
-    values: VisRxWidgetStateValues;
-    visible: boolean;
-    disabled?: boolean;
-}
-
-class VisRxWidget<TRxData extends Record<string, any>, TState extends Partial<VisRxWidgetState> = VisRxWidgetState> extends VisBaseWidget<VisRxWidgetState & TState & { rxData: TRxData }> {
-    static t(text: string, ...args: (string | number | boolean)[]): string {
-        return text;
-    }
-
-    componentDidMount(): void {
-
-    }
-
-    componentWillUnmount() {
-
-    }
-
-    // eslint-disable-next-line class-methods-use-this
-    protected renderWidgetBody(_props: RxRenderWidgetProps): React.JSX.Element | null {
-        return null;
-    }
-}
-
-interface RxData {
+interface DemoWidgetRxData {
     type: 'all' | 'current' | 'days';
     oid: string;
-}
-
-declare global {
-    interface Window {
-        visRxWidget: typeof VisRxWidget<RxData>;
-    }
 }
 
 // By minimal implementation of the widget, only 3 methods are required:
 // - getWidgetInfo (static and instance) - to define the widget properties
 // - renderWidgetBody - to render the widget
 // - getI18nPrefix - optional if you want to use translations, where the prefix added automatically
+export default class DemoWidget extends (window.visRxWidget as typeof VisRxWidget)<DemoWidgetRxData, DemoWidgetState> {
+    // you can omit this constructor if no states must be initialized
+    constructor(props: VisRxWidgetProps) {
+        super(props);
+        this.state = {
+            ...this.state,
+            // Just to show how to use custom state type
+            customStateValue: 'my Value',
+        };
+    }
 
-class DemoWidget extends window.visRxWidget {
-    static getWidgetInfo() {
+    static getWidgetInfo(): RxWidgetInfo {
         return {
             id: 'tplDemoWidget',
             visSet: 'demo',
             visSetLabel: 'vis_2_widgets_template', // Widget set translated label (should be defined only in one widget of a set)
-            visSetColor: '#cf00ff',                // Color of a widget set. it is enough to set color only in one widget of a set
-            visName: 'DemoWidget',                 // Name of widget
+            visSetColor: '#cf00ff', // Color of a widget set. it is enough to set color only in one widget of a set
+            visName: 'DemoWidget', // Name of widget
             visAttrs: [
                 {
                     name: 'common', // group name
                     fields: [
                         {
-                            name: 'type',    // name in data structure
-                            label: 'type',   // translated field label
+                            name: 'type', // name in data structure
+                            label: 'type', // translated field label
                             type: 'select',
                             options: ['all', 'current', 'days'],
                             default: 'all',
@@ -132,7 +54,7 @@ class DemoWidget extends window.visRxWidget {
                     label: 'private', // translated group label
                     fields: [
                         {
-                            name: 'oid',     // name in data structure
+                            name: 'oid', // name in data structure
                             type: 'id',
                             label: 'oid', // translated field label
                         },
@@ -145,9 +67,8 @@ class DemoWidget extends window.visRxWidget {
     }
 
     // eslint-disable-next-line class-methods-use-this
-    propertiesUpdate() {
+    propertiesUpdate(): void {
         // this function could be deleted if not used
-
         // The widget has 3 important states
         // 1. this.state.values - contains all state values, that are used in widget (automatically collected from widget info).
         //                        So you can use `this.state.values[this.state.rxData.oid + '.val']` to get the value of state with id this.state.rxData.oid
@@ -157,28 +78,23 @@ class DemoWidget extends window.visRxWidget {
         //                        then this.state.rxData.type will have state value of `javascript.0.width` + 'px
     }
 
-    async componentDidMount(): Promise<void> {
+    componentDidMount(): void {
         // this function could be deleted if not used
-        await super.componentDidMount();
+        super.componentDidMount();
 
         // Update data
         this.propertiesUpdate();
     }
 
-    // To not write before every label "vis_2_widgets_template_" we can use this method
-    static getI18nPrefix() {
-        return 'vis_2_widgets_template_';
-    }
-
     // Do not delete this method. It is used by vis to read the widget configuration.
     // eslint-disable-next-line class-methods-use-this
-    getWidgetInfo() {
+    getWidgetInfo(): RxWidgetInfo {
         // Do not delete this method.
         return DemoWidget.getWidgetInfo();
     }
 
     // This function is called every time when rxData is changed
-    onRxDataChanged() {
+    onRxDataChanged(): void {
         // this could be deleted if propertiesUpdate not overridden
 
         this.propertiesUpdate();
@@ -186,17 +102,17 @@ class DemoWidget extends window.visRxWidget {
 
     // This function is called every time when rxStyle is changed
     // eslint-disable-next-line class-methods-use-this
-    onRxStyleChanged() {
+    onRxStyleChanged(): void {
         // this could be deleted if not used
     }
 
     // This function is called every time when some Object State updated, but all changes lands into this.state.values too
-    // eslint-disable-next-line no-unused-vars,class-methods-use-this,@typescript-eslint/no-unused-vars,@typescript-eslint/no-empty-function
-    onStateUpdated(_id: string, _state: ioBroker.State | null | undefined) {
+    // eslint-disable-next-line class-methods-use-this
+    onStateUpdated(_id: string, _state: ioBroker.State | null | undefined): void {
         // this could be deleted if not used
     }
 
-    renderWidgetBody(props: RxRenderWidgetProps) {
+    renderWidgetBody(props: RxRenderWidgetProps): React.JSX.Element {
         // this method is required
         // this line is required to call the parent class method
         super.renderWidgetBody(props);
@@ -204,14 +120,12 @@ class DemoWidget extends window.visRxWidget {
         // render here your widget...
         const text = DemoWidget.t('My Demo widget:');
 
-        return <Card style={{ width: '100%', height: '100%' }}>
-            <CardContent>
-                {text}
-                {' '}
-                {this.state.values[`${this.state.rxData.oid}.val`]}
-            </CardContent>
-        </Card>;
+        return (
+            <Card style={{ width: '100%', height: '100%' }}>
+                <CardContent>
+                    {text} {this.state.values[`${this.state.rxData.oid}.val`]}
+                </CardContent>
+            </Card>
+        );
     }
 }
-
-export default DemoWidget;

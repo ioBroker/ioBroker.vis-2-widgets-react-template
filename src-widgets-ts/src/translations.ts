@@ -22,7 +22,7 @@ const translations = {
     pl: langPl,
     uk: langUk,
     'zh-cn': langZh,
-    prefix: 'vis_2_widgets_template_',
+    prefix: true,
 };
 
 export default translations;

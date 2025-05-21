@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-    Card, CardContent,
-} from '@mui/material';
+import { Card, CardContent } from '@mui/material';
 
 class DemoWidget extends window.visRxWidget {
     static getWidgetInfo() {
@@ -9,15 +7,15 @@ class DemoWidget extends window.visRxWidget {
             id: 'tplDemoWidget',
             visSet: 'demo',
             visSetLabel: 'vis_2_widgets_template', // Widget set translated label (should be defined only in one widget of a set)
-            visSetColor: '#cf00ff',                // Color of a widget set. it is enough to set color only in one widget of a set
-            visName: 'DemoWidget',                 // Name of widget
+            visSetColor: '#cf00ff', // Color of a widget set. it is enough to set color only in one widget of a set
+            visName: 'DemoWidget', // Name of widget
             visAttrs: [
                 {
                     name: 'common', // group name
                     fields: [
                         {
-                            name: 'type',    // name in data structure
-                            label: 'type',   // translated field label
+                            name: 'type', // name in data structure
+                            label: 'type', // translated field label
                             type: 'select',
                             options: ['all', 'current', 'days'],
                             default: 'all',
@@ -29,7 +27,7 @@ class DemoWidget extends window.visRxWidget {
                     label: 'private', // translated group label
                     fields: [
                         {
-                            name: 'oid',     // name in data structure
+                            name: 'oid', // name in data structure
                             type: 'id',
                             label: 'oid', // translated field label
                         },
@@ -59,11 +57,6 @@ class DemoWidget extends window.visRxWidget {
         this.propertiesUpdate();
     }
 
-    // To not write before every label "vis_2_widgets_template_" we can use this method
-    static getI18nPrefix() {
-        return 'vis_2_widgets_template_';
-    }
-
     // Do not delete this method. It is used by vis to read the widget configuration.
     // eslint-disable-next-line class-methods-use-this
     getWidgetInfo() {
@@ -77,28 +70,24 @@ class DemoWidget extends window.visRxWidget {
 
     // This function is called every time when rxStyle is changed
     // eslint-disable-next-line class-methods-use-this
-    onRxStyleChanged() {
-
-    }
+    onRxStyleChanged() {}
 
     // This function is called every time when some Object State updated, but all changes lands into this.state.values too
     // eslint-disable-next-line class-methods-use-this, no-unused-vars
-    onStateUpdated(id, state) {
-
-    }
+    onStateUpdated(id, state) {}
 
     renderWidgetBody(props) {
         super.renderWidgetBody(props);
 
         const text = DemoWidget.t('My Demo widget:');
 
-        return <Card style={{ width: '100%', height: '100%' }}>
-            <CardContent>
-                {text}
-                {' '}
-                {this.state.values[`${this.state.rxData.oid}.val`]}
-            </CardContent>
-        </Card>;
+        return (
+            <Card style={{ width: '100%', height: '100%' }}>
+                <CardContent>
+                    {text} {this.state.values[`${this.state.rxData.oid}.val`]}
+                </CardContent>
+            </Card>
+        );
     }
 }
 

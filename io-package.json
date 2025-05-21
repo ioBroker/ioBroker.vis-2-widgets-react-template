@@ -128,8 +128,8 @@
     ],
     "license": "MIT",
     "platform": "Javascript/Node.js",
-    "icon": "vis-2-widgets-react-template.png",
-    "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-react-template/master/admin/vis-2-widgets-react-template.png",
+    "icon": "vis-2-widgets-react-template.svg",
+    "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-react-template/master/admin/vis-2-widgets-react-template.svg",
     "enabled": true,
     "readme": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template/blob/master/README.md",
     "loglevel": "info",
@@ -151,6 +151,8 @@
         "i18n": "component",
         "name": "vis2DemoWidget",
         "url": "vis-2-widgets-react-template/customWidgets.js",
+        "bundlerType": "module",
+        "bundlerTypeComment": "Set bundlerType only for TypeScript widgets",
         "components": [
           "DemoWidget"
         ]

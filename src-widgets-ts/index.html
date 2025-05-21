@@ -6,7 +6,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0"
         />
-        <title>Vis Widgets Template</title>
+        <title>Demo widget</title>
         <script
             type="text/javascript"
             src="_socket/info.js"
@@ -19,7 +19,7 @@
             script.onload = function () {
                 typeof window.socketLoadedHandler === 'function' && window.socketLoadedHandler();
             };
-            script.src = `${window.location.protocol}//${window.location.hostname}:8082/lib/js/socket.io.js`;
+            script.src = window.location.protocol + '//' + window.location.hostname + ':8082/lib/js/socket.io.js';
             document.head.appendChild(script);
         </script>
     </head>
