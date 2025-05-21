@@ -50,7 +50,7 @@ For faster development, you can:
     ### **WORK IN PROGRESS**
 -->
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.1.0 (2025-05-21)
 * (@German) Finished TypeScript project
 
 ### 1.0.1 (2024-07-13)

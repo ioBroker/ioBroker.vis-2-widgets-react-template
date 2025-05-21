@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "vis-2-widgets-react-template",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "news": {
+      "1.1.0": {
+        "en": "Finished TypeScript project",
+        "de": "Fertiges TypeScript-Projekt",
+        "ru": "Завершен проект TypeScript",
+        "pt": "Projeto terminado TypeScript",
+        "nl": "TypeScript-project voltooid",
+        "fr": "Projet TypeScript terminé",
+        "it": "Progetto TypeScript finito",
+        "es": "Proyecto TipoScript terminado",
+        "pl": "Zakończony projekt TypeScript",
+        "uk": "Завершено проект TypeScript",
+        "zh-cn": "已完成类型脚本工程"
+      },
       "1.0.1": {
         "en": "changed the node version from 16 to 20 in test and release workflow\nupdated packages",
         "de": "die knotenversion von 16 auf 20 im test- und release-workflow geändert\naktualisierte pakete",
@@ -69,19 +82,6 @@
         "zh-cn": "更新包"
       },
       "0.1.5": {
-        "en": "update packages",
-        "de": "update-pakete",
-        "ru": "обновление пакетов",
-        "pt": "pacotes de atualização",
-        "nl": "vertaling:",
-        "fr": "mettre à jour les paquets",
-        "it": "pacchetti di aggiornamento",
-        "es": "actualizar paquetes",
-        "pl": "pakiet aktualizacji",
-        "uk": "оновлення пакетів",
-        "zh-cn": "更新包"
-      },
-      "0.1.4": {
         "en": "update packages",
         "de": "update-pakete",
         "ru": "обновление пакетов",
