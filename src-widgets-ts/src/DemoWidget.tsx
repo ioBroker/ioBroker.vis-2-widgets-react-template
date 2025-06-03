@@ -34,6 +34,7 @@ export default class DemoWidget extends (window.visRxWidget as typeof VisRxWidge
         return {
             id: 'tplDemoWidget',
             visSet: 'vis-2-widgets-react-template',
+            visSetIcon: 'widgets/vis-2-widgets-react-template/img/vis-2-widgets-react-template.svg',
             visSetLabel: 'vis_2_widgets_template', // Widget set translated label (should be defined only in one widget of a set)
             visSetColor: '#cf00ff', // Color of a widget set. it is enough to set color only in one widget of a set
             visName: 'DemoWidget', // Name of widget
