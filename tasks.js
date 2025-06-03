@@ -122,9 +122,9 @@ function jsvClean() {
 }
 
 function jsvCopyAllFiles() {
-    copyFiles([`${SRC_TSV}build/customWidgets.js`], `widgets/${adapterName}`);
-    copyFiles([`${SRC_TSV}build/assets/*.*`], `widgets/${adapterName}/assets`);
-    copyFiles([`${SRC_TSV}build/img/*`], `widgets/${adapterName}/img`);
+    copyFiles([`${SRC_JSV}build/customWidgets.js`], `widgets/${adapterName}`);
+    copyFiles([`${SRC_JSV}build/assets/*.*`], `widgets/${adapterName}/assets`);
+    copyFiles([`${SRC_JSV}build/img/*`], `widgets/${adapterName}/img`);
 }
 
 if (process.argv.includes('--javascript-vite') || process.argv.length === 2) {
