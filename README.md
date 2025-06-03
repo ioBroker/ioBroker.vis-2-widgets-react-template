@@ -57,6 +57,56 @@ For faster development, you can:
 - write in object `system.adapter.vis-2-widgets-react-template.0`=>`common.visWidgets.vis2DemoWidget.url` to `http://localhost:4173/customWidgets.js`
 - Press F5 in `iobroker.vis-2` web page
 
+## Development with Javascript + vite
+
+It is suggested to develop the widgets with TypeScript.
+Compared to the solution javascript + CRA, vite is much faster and more resource-efficient in the build process
+
+After all entries with `vis-2-widgets-react-template` are replaced to your adapter name in `package.json`, `io-package.json`
+and file `admin/vis-2-widgets-react-template.svg` renamed too, you can start with renaming of widgets. (You can use PNG files too)
+
+Some important places:
+
+1. `io-package.json` => `common.visWidgets`
+2. `src-widgets-jsvite/vite.config.ts` from line 13
+3. File `DemoWidget.jsx`
+
+File in directory `src-widgets-jsvite/index.html` `src-widgets-jsvite/src/index.js` is only to satisfy the compiler and will not be used in production.
+
+By development, you can start the script from `src-widgets-jsvite` folder with `npm run start` command,
+and then on port 4173 you will see the demo widget.
+
+For faster development, you can:
+
+- start dev-server with installed web and vis-2 adapter with the following command `dev-server watch --noStart`. If your adapter contains adapter backend logic, start your adapter with a suitable launch configuration.
+- start in src-widgets-ts: `npm run start`
+- write in object `system.adapter.vis-2-widgets-react-template.0`=>`common.visWidgets.vis2DemoWidget.url` to `http://localhost:4173/customWidgets.js`, with dev-server you have to upload the adapter with the `dev-server upload` command
+- Start vis-2 with one of the launch configurations mentioned below
+- Place breakpoints in your vis-2 widget code.
+
+## VSCode launch.json
+
+Adjust the webroot path to match your source.
+
+```json
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "vis-2 editor",
+            "url": "http://localhost:8082/vis-2/edit.html#default",
+            "webRoot": "${workspaceFolder}/src-widgets-ts"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "vis-2 runtime",
+            "url": "http://localhost:8082/vis-2/?main#default",
+            "webRoot": "${workspaceFolder}/src-widgets-ts"
+        }
+```
+
+## Changelog
+
 <!--
     ### **WORK IN PROGRESS**
 -->
