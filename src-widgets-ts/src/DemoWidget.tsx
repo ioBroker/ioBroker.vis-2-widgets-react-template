@@ -19,6 +19,7 @@ interface DemoWidgetRxData {
 // - renderWidgetBody - to render the widget
 // - getI18nPrefix - optional if you want to use translations, where the prefix added automatically
 export default class DemoWidget extends (window.visRxWidget as typeof VisRxWidget)<DemoWidgetRxData, DemoWidgetState> {
+    static adapter: any;
     // you can omit this constructor if no states must be initialized
     constructor(props: VisRxWidgetProps) {
         super(props);
@@ -92,7 +93,12 @@ export default class DemoWidget extends (window.visRxWidget as typeof VisRxWidge
         // Do not delete this method.
         return DemoWidget.getWidgetInfo();
     }
-
+    // If the "prefix" attribute in translations.ts is true or string, you must implement this function.
+    // If true, the adapter name + _ is used.
+    // If string, then this function must return exactly that string
+    static getI18nPrefix(): string {
+        return `${DemoWidget.adapter}_`;
+    }
     // This function is called every time when rxData is changed
     onRxDataChanged(): void {
         // this could be deleted if propertiesUpdate not overridden
