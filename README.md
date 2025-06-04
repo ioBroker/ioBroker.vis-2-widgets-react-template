@@ -18,6 +18,7 @@ Some important places:
 1. `io-package.json` => `common.visWidgets`
 2. `src-widgets-ts/vite.config.ts` from line 13
 3. File `DemoWidget.tsx`
+4. Check existance of attribute `"bundlerType": "module"` in `io-package.json`
 
 File in directory `src-widgets-ts/index.html` `src-widgets-ts/src/index.tsx` and is only to satisfy the compiler and will not be used in production.
 
@@ -70,6 +71,7 @@ Some important places:
 1. `io-package.json` => `common.visWidgets`
 2. `src-widgets-jsvite/vite.config.ts` from line 13
 3. File `DemoWidget.jsx`
+4. Check existance of attribute `"bundlerType": "module"` in `io-package.json`
 
 File in directory `src-widgets-jsvite/index.html` `src-widgets-jsvite/src/index.js` is only to satisfy the compiler and will not be used in production.
 

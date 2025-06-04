@@ -117,7 +117,7 @@ const SRC_JSV = 'src-widgets-jsvite/';
 const src_jsv = `${__dirname}/${SRC_JSV}`;
 
 function jsvClean() {
-    deleteFoldersRecursive(`${src_ts}build`);
+    deleteFoldersRecursive(`${src_jsv}build`);
     deleteFoldersRecursive(`${__dirname}/widgets`);
 }
 
