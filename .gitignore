@@ -9,3 +9,7 @@ src-widgets-ts/node_modules
 src-widgets-ts/package-lock.json
 src-widgets-ts/build
 src-widgets-ts/.__mf__temp
+src-widgets-jsvite/node_modules
+src-widgets-jsvite/package-lock.json
+src-widgets-jsvite/build
+src-widgets-jsvite/.__mf__temp

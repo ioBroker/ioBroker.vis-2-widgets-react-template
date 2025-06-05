@@ -38,7 +38,7 @@ Some important places:
 3. File `DemoWidget.jsx`
 4. Check that attribute `bundlerType` in `io-package.json` is not set. (Important!)
 
-File in directory `src-widgets-js/src/index.js` is only to satisfy the compiler and will not be used in production.
+File in directory `src-widgets-js/src/index.jsx` is only to satisfy the compiler and will not be used in production.
 
 By development, you can start the script from `src-widgets-js` folder with `npm run start` command,
 and then on port 4173 you will see the demo widget.
@@ -65,7 +65,7 @@ Some important places:
 3. File `DemoWidget.jsx`
 4. Check existence of attribute `"bundlerType": "module"` in `io-package.json`
 
-File in directory `src-widgets-jsvite/index.html` `src-widgets-jsvite/src/index.js` is only to satisfy the compiler and will not be used in production.
+File in directory `src-widgets-jsvite/index.html` `src-widgets-jsvite/src/index.jsx` is only to satisfy the compiler and will not be used in production.
 
 For debugging, please see [Debugging](#debugging-with-vite-typescript-or-javascript)
 
