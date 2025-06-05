@@ -22,16 +22,7 @@ Some important places:
 
 File in directory `src-widgets-ts/index.html` `src-widgets-ts/src/index.tsx` and is only to satisfy the compiler and will not be used in production.
 
-By development, you can start the script from `src-widgets-ts` folder with `npm run start` command,
-and then on port 4173 you will see the demo widget.
-
-For faster development, you can:
-
-- start dev-server with installed web and vis-2 adapter with the following command `dev-server watch --noStart`. If your adapter contains adapter backend logic, start your adapter with a suitable launch configuration.
-- start in src-widgets-ts: `npm run start`
-- write in object `system.adapter.vis-2-widgets-react-template.0`=>`common.visWidgets.vis2DemoWidget.url` to `http://localhost:4173/customWidgets.js`, with dev-server you have to upload the adapter with the `dev-server upload` command
-- Start vis-2 with one of the launch configurations mentioned below.
-- Place breakpoints in your vis-2 widget code.
+For debugging please see [Debugging](#debugging-with-vite-typescript-or-javascript)
 
 ## Development with JavaScript + CRA
 
@@ -75,34 +66,54 @@ Some important places:
 
 File in directory `src-widgets-jsvite/index.html` `src-widgets-jsvite/src/index.js` is only to satisfy the compiler and will not be used in production.
 
-By development, you can start the script from `src-widgets-jsvite` folder with `npm run start` command,
-and then on port 4173 you will see the demo widget.
+For debugging please see [Debugging](#debugging-with-vite-typescript-or-javascript)
 
-For faster development, you can:
+## Debugging with vite (Typescript or Javascript)
 
-- start dev-server with installed web and vis-2 adapter with the following command `dev-server watch --noStart`. If your adapter contains adapter backend logic, start your adapter with a suitable launch configuration.
-- start in src-widgets-ts: `npm run start`
+To be able to debug with vite and Typescript/Javascript, vis-2 and the vis-2-react-widget adapter to be developed must each be running in vite dev mode.
+
+To do this, perform the following steps:
+
+- Install vis-2 according to the following description:
+  <https://github.com/ioBroker/ioBroker.vis-2?tab=readme-ov-file#development-and-debugging>
+- As a result, the vis-2 adapter is running, but cannot be called at this point, as this requires a running instance of ioBroker.
+- Open another window of a development environment (e.g., VS Code)
+- Then set up the vis-2-react-widgets project/repository according to the description in this README.
+- Then set up the iobroker dev server according to the following description:
+  <https://github.com/ioBroker/dev-server?tab=readme-ov-file#installation>
+- To start the iobroker dev-server, I recommend the following command for the vis-2-widgets adapter:
+
+```shell
+dev-server watch --noStart
+```
+
 - write in object `system.adapter.vis-2-widgets-react-template.0`=>`common.visWidgets.vis2DemoWidget.url` to `http://localhost:4173/customWidgets.js`, with dev-server you have to upload the adapter with the `dev-server upload` command
-- Start vis-2 with one of the launch configurations mentioned below
-- Place breakpoints in your vis-2 widget code.
+- Start the widgets adapter in the widgets-src directory in vite dev mode with the following command:
+
+```shell
+npm run start
+```
+
+- You can then open a browser instance using one of the two launch configurations. Breakpoints can be set in vscode, which will then also stop vscode.
 
 ## VSCode launch.json
 
-Adjust the webroot path to match your source.
+Adjust the webroot path to match your widget source.
+This launch configuration is only valid for debugging with vite.
 
 ```json
         {
             "type": "chrome",
             "request": "launch",
             "name": "vis-2 editor",
-            "url": "http://localhost:8082/vis-2/edit.html#default",
+            "url": "http://localhost:3000/#default",
             "webRoot": "${workspaceFolder}/src-widgets-ts"
         },
         {
             "type": "chrome",
             "request": "launch",
             "name": "vis-2 runtime",
-            "url": "http://localhost:8082/vis-2/?main#default",
+            "url": "http://localhost:3000/?main&runtime=true#default",
             "webRoot": "${workspaceFolder}/src-widgets-ts"
         }
 ```
@@ -118,6 +129,7 @@ Adjust the webroot path to match your source.
 - (oweitman) add js/vite support
 - (oweitman) improve documentation
 - (oweitman) small fixes
+- (oweitman) debugging description for vite
 
 ### 1.1.1 (2025-06-02)
 
