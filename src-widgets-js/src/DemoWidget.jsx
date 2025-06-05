@@ -2,10 +2,11 @@ import React from 'react';
 import { Card, CardContent } from '@mui/material';
 
 class DemoWidget extends window.visRxWidget {
+    static adapter;
     static getWidgetInfo() {
         return {
             id: 'tplDemoWidget',
-            visSet: 'demo',
+            visSet: 'vis-2-widgets-react-template',
             visSetLabel: 'vis_2_widgets_template', // Widget set translated label (should be defined only in one widget of a set)
             visSetColor: '#cf00ff', // Color of a widget set. it is enough to set color only in one widget of a set
             visName: 'DemoWidget', // Name of widget
@@ -35,7 +36,8 @@ class DemoWidget extends window.visRxWidget {
                 },
                 // check here all possible types https://github.com/ioBroker/ioBroker.vis/blob/react/src/src/Attributes/Widget/SCHEMA.md
             ],
-            visPrev: 'widgets/vis-2-widgets-react-template/img/vis-widget-demo.png',
+            visPrev:
+                'widgets/vis-2-widgets-react-template/img/vis-widget-demo.png',
         };
     }
 
@@ -61,6 +63,13 @@ class DemoWidget extends window.visRxWidget {
     // eslint-disable-next-line class-methods-use-this
     getWidgetInfo() {
         return DemoWidget.getWidgetInfo();
+    }
+
+    // If the "prefix" attribute in translations.ts is true or string, you must implement this function.
+    // If true, the adapter name + _ is used.
+    // If string, then this function must return exactly that string
+    static getI18nPrefix() {
+        return `${DemoWidget.adapter}_`;
     }
 
     // This function is called every time when rxData is changed

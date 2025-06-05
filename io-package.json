@@ -152,7 +152,7 @@
         "name": "vis2DemoWidget",
         "url": "vis-2-widgets-react-template/customWidgets.js",
         "bundlerType": "module",
-        "bundlerTypeComment": "Set bundlerType only for TypeScript widgets",
+        "bundlerTypeComment": "Set bundlerType only for TypeScript or vite widgets",
         "components": [
           "DemoWidget"
         ]
