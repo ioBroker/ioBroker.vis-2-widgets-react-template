@@ -2,6 +2,8 @@
 node_modules
 package-lock.json
 widgets
+tmp/
+*.tgz
 src-widgets-js/node_modules
 src-widgets-js/package-lock.json
 src-widgets-js/build

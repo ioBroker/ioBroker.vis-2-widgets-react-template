@@ -35,8 +35,8 @@
     "scripts": {
         "prepublishOnly": "node tasks",
         "lint": "cd src-widgets-ts && eslint -c eslint.config.mjs",
-        "build": "node tasks --javascript-vite",
-        "build-ts": "node tasks ",
+        "build": "npm run build-jsv",
+        "build-ts": "node tasks",
         "build-jsv": "node tasks --javascript-vite",
         "build-js": "node tasks --javascript",
         "release": "release-script",
