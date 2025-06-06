@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "vis-2-widgets-react-template",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "news": {
+      "1.2.0": {
+        "en": "add js/vite support\nimprove documentation\nsmall fixes\ndebugging description for vite",
+        "de": "js/vite unterstützung hinzufügen\nverbesserung der dokumentation\nkleine fixes\ndebugging beschreibung für vite",
+        "ru": "поддержка js/vite\nулучшить документацию\nнебольшие фиксации\nописание отладки для vite",
+        "pt": "adicionar suporte js/vite\nmelhorar a documentação\npequenas correções\ndepuração descrição para vite",
+        "nl": "js/vite-ondersteuning toevoegen\nde documentatie verbeteren\nkleine fixes\nbeschrijving van debuggen voor vite",
+        "fr": "ajouter le support js/vite\naméliorer la documentation\npetites corrections\ndescription de débogage pour le vite",
+        "it": "aggiungere js/vite supporto\nmigliorare la documentazione\npiccole correzioni\ndescrizione debug per vite",
+        "es": "añadir js/vite support\nmejorar la documentación\npequeñas fijaciones\ndebugging descripción para vite",
+        "pl": "dodaj obsługę js / vite\npoprawić dokumentację\nmałe poprawki\nopis debugowania vite",
+        "uk": "додати js/vite support\nвдосконалення документації\nмаленькі кріплення\nопис деbugging для vite",
+        "zh-cn": "添加js/vite 支持\n改进文件编制\n小修正\nvite 调试描述"
+      },
       "1.1.1": {
         "en": "Finished TypeScript project",
         "de": "Fertiges TypeScript-Projekt",
@@ -80,19 +93,6 @@
         "pl": "Added CI test",
         "uk": "Додано тести CI",
         "zh-cn": "增加CI试验"
-      },
-      "0.1.6": {
-        "en": "update packages",
-        "de": "update-pakete",
-        "ru": "обновление пакетов",
-        "pt": "pacotes de atualização",
-        "nl": "vertaling:",
-        "fr": "mettre à jour les paquets",
-        "it": "pacchetti di aggiornamento",
-        "es": "actualizar paquetes",
-        "pl": "pakiet aktualizacji",
-        "uk": "оновлення пакетів",
-        "zh-cn": "更新包"
       }
     },
     "title": "vis-2-widgets-react-template.org",

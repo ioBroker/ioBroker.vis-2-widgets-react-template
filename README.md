@@ -124,8 +124,7 @@ This launch configuration is only valid for debugging with vite.
 <!--
     ### **WORK IN PROGRESS**
 -->
-
-### **WORK IN PROGRESS**
+### 1.2.0 (2025-06-06)
 
 - (oweitman) add js/vite support
 - (oweitman) improve documentation
