@@ -73,7 +73,13 @@ For debugging, please see [Debugging](#debugging-with-vite-typescript-or-javascr
 
 To be able to debug with vite and TypeScript/JavaScript, vis-2 and the vis-2-react-widget adapter to be developed must each be running in vite dev mode.
 
-To do this, perform the following steps:
+In preparation, you must:
+
+- install the web adapter in iobroker
+- install the vis-2 adapter in iobroker
+- start vis-2 in the editor to create a corresponding project.
+
+Then follow these steps:
 
 - Install vis-2 according to the following description:
   <https://github.com/ioBroker/ioBroker.vis-2?tab=readme-ov-file#development-and-debugging>
@@ -124,6 +130,12 @@ This launch configuration is only valid for debugging with vite.
 <!--
     ### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+
+- (oweitman) improve documentation
+- (oweitman) add missing eslint file to prevent markdown formating errors
+
 ### 1.2.0 (2025-06-06)
 
 - (oweitman) add js/vite support
