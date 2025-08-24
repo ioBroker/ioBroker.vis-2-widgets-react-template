@@ -3,19 +3,6 @@
         "name": "vis-2-widgets-react-template",
         "version": "1.3.0",
         "news": {
-            "1.3.0": {
-                "en": "Added Icon Set example",
-                "de": "Hinzugefügt Icon Beispiel",
-                "ru": "Добавлена икона Пример",
-                "pt": "Ícone Adicionado Dar exemplo",
-                "nl": "Pictogram toegevoegd Voorbeeld instellen",
-                "fr": "Icône ajoutée Définir l'exemple",
-                "it": "Aggiunto Icon Esempio di impostazione",
-                "es": "Icono añadido Ejemplo",
-                "pl": "Dodano ikonę Ustaw przykład",
-                "uk": "Додана ікона Приклад набору",
-                "zh-cn": "添加图标 设定示例"
-            },
             "1.2.0": {
                 "en": "add js/vite support\nimprove documentation\nsmall fixes\ndebugging description for vite",
                 "de": "js/vite unterstützung hinzufügen\nverbesserung der dokumentation\nkleine fixes\ndebugging beschreibung für vite",
@@ -150,7 +137,9 @@
                 "bundlerType": "module",
                 "bundlerTypeComment": "Set bundlerType only for TypeScript or vite widgets",
                 "components": ["DemoWidget"]
-            },
+            }
+        },
+        "visIconSets": {
             "vis2DemoIconSet": {
                 "iconSet": true,
                 "name": {

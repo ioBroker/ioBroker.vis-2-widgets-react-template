@@ -125,12 +125,11 @@ From vis-2 version 2.13.0 onwards, SVG icon sets are supported.
 
 To add an icon set, please do the following steps:
 
-- add Entry in `io-package.json` in `common.visWidgets` like this:
+- add Entry in `io-package.json` in `common.visIconSets` like this:
 
 ```json5
-"common.visWidgets": {
+"common.visIconSets": {
     "vis2DemoIconSet": {
-        "iconSet": true, // This flag is important and must be set
         "name": { // name could be a string or an object with translations
             "en": "Demo icon set",
             "de": "Demo-Icon-Set",
@@ -175,7 +174,7 @@ See an [example](src-widgets-ts/src-icon-set/combine.js) how to create such a fi
 <!--
     ### **WORK IN PROGRESS**
 -->
-### 1.3.0 (2025-08-24)
+### **WORK IN PROGRESS**
 - (@GermanBluefox) Added Icon Set example
 
 ### 1.2.0 (2025-06-06)
