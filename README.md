@@ -175,7 +175,7 @@ See an [example](src-widgets-ts/src-icon-set/combine.js) how to create such a fi
 <!--
     ### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 1.3.0 (2025-08-24)
 - (@GermanBluefox) Added Icon Set example
 
 ### 1.2.0 (2025-06-06)

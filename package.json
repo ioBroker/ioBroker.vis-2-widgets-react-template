@@ -1,54 +1,54 @@
 {
-    "name": "iobroker.vis-2-widgets-react-template",
-    "version": "1.2.0",
-    "description": "ioBroker vis widget demo",
-    "author": "bluefox <dogafox@gmail.com>",
-    "contributors": [
-        "bluefox <dogafox@gmail.com>"
-    ],
-    "homepage": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template"
-    },
-    "keywords": [
-        "ioBroker",
-        "visualization"
-    ],
-    "devDependencies": {
-        "@alcalzone/release-script": "^3.8.0",
-        "@alcalzone/release-script-plugin-iobroker": "^3.7.2",
-        "@alcalzone/release-script-plugin-license": "^3.7.0",
-        "@iobroker/build-tools": "^2.0.15",
-        "@iobroker/eslint-config": "^2.0.2",
-        "@iobroker/vis-2-widgets-react-dev": "^4.0.4",
-        "@iobroker/vis-2-widgets-testing": "^1.0.6"
-    },
-    "main": "widgets/vis-2-widgets-react-template/customWidgets.js",
-    "files": [
-        "admin/",
-        "widgets/",
-        "io-package.json",
-        "LICENSE"
-    ],
-    "scripts": {
-        "prepublishOnly": "node tasks",
-        "lint": "cd src-widgets-ts && eslint -c eslint.config.mjs",
-        "build": "node tasks --typescript",
-        "build-ts": "node tasks --typescript",
-        "build-jsv": "node tasks --javascript-vite",
-        "build-js": "node tasks --javascript",
-        "release": "release-script",
-        "release-patch": "release-script patch --yes",
-        "release-minor": "release-script minor --yes",
-        "release-major": "release-script major --yes",
-        "test": "mocha ./test/*.test.js",
-        "update-packages": "npx -y npm-check-updates --upgrade && cd src-widgets-js && npx -y npm-check-updates --upgrade && cd ../src-widgets-ts && npx -y npm-check-updates --upgrade",
-        "npm": "npm i -f && cd src-widgets-js && npm i -f && cd ../src-widgets-ts && npm i -f && cd ../src-widgets-jsvite && npm i -f"
-    },
-    "bugs": {
-        "url": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template/issues"
-    },
-    "readmeFilename": "README.md"
+  "name": "iobroker.vis-2-widgets-react-template",
+  "version": "1.3.0",
+  "description": "ioBroker vis widget demo",
+  "author": "bluefox <dogafox@gmail.com>",
+  "contributors": [
+    "bluefox <dogafox@gmail.com>"
+  ],
+  "homepage": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template"
+  },
+  "keywords": [
+    "ioBroker",
+    "visualization"
+  ],
+  "devDependencies": {
+    "@alcalzone/release-script": "^3.8.0",
+    "@alcalzone/release-script-plugin-iobroker": "^3.7.2",
+    "@alcalzone/release-script-plugin-license": "^3.7.0",
+    "@iobroker/build-tools": "^2.0.15",
+    "@iobroker/eslint-config": "^2.0.2",
+    "@iobroker/vis-2-widgets-react-dev": "^4.0.4",
+    "@iobroker/vis-2-widgets-testing": "^1.0.6"
+  },
+  "main": "widgets/vis-2-widgets-react-template/customWidgets.js",
+  "files": [
+    "admin/",
+    "widgets/",
+    "io-package.json",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prepublishOnly": "node tasks",
+    "lint": "cd src-widgets-ts && eslint -c eslint.config.mjs",
+    "build": "node tasks --typescript",
+    "build-ts": "node tasks --typescript",
+    "build-jsv": "node tasks --javascript-vite",
+    "build-js": "node tasks --javascript",
+    "release": "release-script",
+    "release-patch": "release-script patch --yes",
+    "release-minor": "release-script minor --yes",
+    "release-major": "release-script major --yes",
+    "test": "mocha ./test/*.test.js",
+    "update-packages": "npx -y npm-check-updates --upgrade && cd src-widgets-js && npx -y npm-check-updates --upgrade && cd ../src-widgets-ts && npx -y npm-check-updates --upgrade",
+    "npm": "npm i -f && cd src-widgets-js && npm i -f && cd ../src-widgets-ts && npm i -f && cd ../src-widgets-jsvite && npm i -f"
+  },
+  "bugs": {
+    "url": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template/issues"
+  },
+  "readmeFilename": "README.md"
 }
