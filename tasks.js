@@ -93,6 +93,7 @@ function tsClean() {
 
 function tsCopyAllFiles() {
     copyFiles([`${SRC_TS}build/customWidgets.js`], `widgets/${adapterName}`);
+    copyFiles([`${SRC_TS}build/icon-set.json`], `widgets/${adapterName}`);
     copyFiles([`${SRC_TS}build/assets/*.*`], `widgets/${adapterName}/assets`);
     copyFiles([`${SRC_TS}build/img/*`], `widgets/${adapterName}/img`);
 }
@@ -127,7 +128,7 @@ function jsvCopyAllFiles() {
     copyFiles([`${SRC_JSV}build/img/*`], `widgets/${adapterName}/img`);
 }
 
-if (process.argv.includes('--javascript-vite') || process.argv.length === 2) {
+if (process.argv.includes('--javascript-vite')) {
     jsvClean();
     let npmPromise;
     if (existsSync(`${src_jsv}/node_modules`)) {

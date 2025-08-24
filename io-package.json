@@ -1,168 +1,178 @@
 {
-  "common": {
-    "name": "vis-2-widgets-react-template",
-    "version": "1.2.0",
-    "news": {
-      "1.2.0": {
-        "en": "add js/vite support\nimprove documentation\nsmall fixes\ndebugging description for vite",
-        "de": "js/vite unterstützung hinzufügen\nverbesserung der dokumentation\nkleine fixes\ndebugging beschreibung für vite",
-        "ru": "поддержка js/vite\nулучшить документацию\nнебольшие фиксации\nописание отладки для vite",
-        "pt": "adicionar suporte js/vite\nmelhorar a documentação\npequenas correções\ndepuração descrição para vite",
-        "nl": "js/vite-ondersteuning toevoegen\nde documentatie verbeteren\nkleine fixes\nbeschrijving van debuggen voor vite",
-        "fr": "ajouter le support js/vite\naméliorer la documentation\npetites corrections\ndescription de débogage pour le vite",
-        "it": "aggiungere js/vite supporto\nmigliorare la documentazione\npiccole correzioni\ndescrizione debug per vite",
-        "es": "añadir js/vite support\nmejorar la documentación\npequeñas fijaciones\ndebugging descripción para vite",
-        "pl": "dodaj obsługę js / vite\npoprawić dokumentację\nmałe poprawki\nopis debugowania vite",
-        "uk": "додати js/vite support\nвдосконалення документації\nмаленькі кріплення\nопис деbugging для vite",
-        "zh-cn": "添加js/vite 支持\n改进文件编制\n小修正\nvite 调试描述"
-      },
-      "1.1.1": {
-        "en": "Finished TypeScript project",
-        "de": "Fertiges TypeScript-Projekt",
-        "ru": "Завершен проект TypeScript",
-        "pt": "Projeto terminado TypeScript",
-        "nl": "TypeScript-project voltooid",
-        "fr": "Projet TypeScript terminé",
-        "it": "Progetto TypeScript finito",
-        "es": "Proyecto TipoScript terminado",
-        "pl": "Zakończony projekt TypeScript",
-        "uk": "Завершено проект TypeScript",
-        "zh-cn": "已完成类型脚本工程"
-      },
-      "1.1.0": {
-        "en": "Finished TypeScript project",
-        "de": "Fertiges TypeScript-Projekt",
-        "ru": "Завершен проект TypeScript",
-        "pt": "Projeto terminado TypeScript",
-        "nl": "TypeScript-project voltooid",
-        "fr": "Projet TypeScript terminé",
-        "it": "Progetto TypeScript finito",
-        "es": "Proyecto TipoScript terminado",
-        "pl": "Zakończony projekt TypeScript",
-        "uk": "Завершено проект TypeScript",
-        "zh-cn": "已完成类型脚本工程"
-      },
-      "1.0.1": {
-        "en": "changed the node version from 16 to 20 in test and release workflow\nupdated packages",
-        "de": "die knotenversion von 16 auf 20 im test- und release-workflow geändert\naktualisierte pakete",
-        "ru": "изменил версию узла с 16 до 20 в тесте и выпуске рабочего процесса\nобновления пакетов",
-        "pt": "mudou a versão do nó de 16 a 20 em fluxo de trabalho de teste e lançamento\npacotes atualizados",
-        "nl": "veranderde de node versie van 16 naar 20 in test en release workflow\nbijgewerkte pakketten",
-        "fr": "a changé la version du nœud de 16 à 20 dans le flux de travail de test et de publication\npaquets mis à jour",
-        "it": "ha cambiato la versione nodo da 16 a 20 in prova e il flusso di lavoro di rilascio\npacchetti aggiornati",
-        "es": "cambió la versión del nodo de 16 a 20 en el flujo de trabajo de prueba y liberación\npaquetes actualizados",
-        "pl": "zmienił wersję węzła z 16 do 20 w pracy testowej i zwalniającej\nzaktualizowane pakiety",
-        "uk": "змінено версію вузла від 16 до 20 у тестовому режимі\nоновлені пакети",
-        "zh-cn": "在测试和发布工作流程中将节点版本从16个改为20个\n更新软件包"
-      },
-      "1.0.0": {
-        "en": "updated packages",
-        "de": "aktualisierte pakete",
-        "ru": "обновления пакетов",
-        "pt": "pacotes atualizados",
-        "nl": "bijgewerkte pakketten",
-        "fr": "paquets mis à jour",
-        "it": "pacchetti aggiornati",
-        "es": "paquetes actualizados",
-        "pl": "zaktualizowane pakiety",
-        "uk": "оновлені пакети",
-        "zh-cn": "更新软件包"
-      },
-      "0.2.1": {
-        "en": "update packages",
-        "de": "update-pakete",
-        "ru": "обновление пакетов",
-        "pt": "pacotes de atualização",
-        "nl": "vertaling:",
-        "fr": "mettre à jour les paquets",
-        "it": "pacchetti di aggiornamento",
-        "es": "actualizar paquetes",
-        "pl": "pakiet aktualizacji",
-        "uk": "оновлення пакетів",
-        "zh-cn": "更新包"
-      },
-      "0.2.0": {
-        "en": "Added CI tests",
-        "de": "CI-Tests",
-        "ru": "Добавлены CI тесты",
-        "pt": "Adicionados testes de IC",
-        "nl": "Toegevoegd CI testen",
-        "fr": "Essais CI ajoutés",
-        "it": "Test CI aggiunti",
-        "es": "Pruebas de CI adicionales",
-        "pl": "Added CI test",
-        "uk": "Додано тести CI",
-        "zh-cn": "增加CI试验"
-      }
+    "common": {
+        "name": "vis-2-widgets-react-template",
+        "version": "1.1.1",
+        "news": {
+            "1.2.0": {
+                "en": "add js/vite support\nimprove documentation\nsmall fixes\ndebugging description for vite",
+                "de": "js/vite unterstützung hinzufügen\nverbesserung der dokumentation\nkleine fixes\ndebugging beschreibung für vite",
+                "ru": "поддержка js/vite\nулучшить документацию\nнебольшие фиксации\nописание отладки для vite",
+                "pt": "adicionar suporte js/vite\nmelhorar a documentação\npequenas correções\ndepuração descrição para vite",
+                "nl": "js/vite-ondersteuning toevoegen\nde documentatie verbeteren\nkleine fixes\nbeschrijving van debuggen voor vite",
+                "fr": "ajouter le support js/vite\naméliorer la documentation\npetites corrections\ndescription de débogage pour le vite",
+                "it": "aggiungere js/vite supporto\nmigliorare la documentazione\npiccole correzioni\ndescrizione debug per vite",
+                "es": "añadir js/vite support\nmejorar la documentación\npequeñas fijaciones\ndebugging descripción para vite",
+                "pl": "dodaj obsługę js / vite\npoprawić dokumentację\nmałe poprawki\nopis debugowania vite",
+                "uk": "додати js/vite support\nвдосконалення документації\nмаленькі кріплення\nопис деbugging для vite",
+                "zh-cn": "添加js/vite 支持\n改进文件编制\n小修正\nvite 调试描述"
+            },
+            "1.1.1": {
+                "en": "Finished TypeScript project",
+                "de": "Fertiges TypeScript-Projekt",
+                "ru": "Завершен проект TypeScript",
+                "pt": "Projeto terminado TypeScript",
+                "nl": "TypeScript-project voltooid",
+                "fr": "Projet TypeScript terminé",
+                "it": "Progetto TypeScript finito",
+                "es": "Proyecto TipoScript terminado",
+                "pl": "Zakończony projekt TypeScript",
+                "uk": "Завершено проект TypeScript",
+                "zh-cn": "已完成类型脚本工程"
+            },
+            "1.1.0": {
+                "en": "Finished TypeScript project",
+                "de": "Fertiges TypeScript-Projekt",
+                "ru": "Завершен проект TypeScript",
+                "pt": "Projeto terminado TypeScript",
+                "nl": "TypeScript-project voltooid",
+                "fr": "Projet TypeScript terminé",
+                "it": "Progetto TypeScript finito",
+                "es": "Proyecto TipoScript terminado",
+                "pl": "Zakończony projekt TypeScript",
+                "uk": "Завершено проект TypeScript",
+                "zh-cn": "已完成类型脚本工程"
+            },
+            "1.0.1": {
+                "en": "changed the node version from 16 to 20 in test and release workflow\nupdated packages",
+                "de": "die knotenversion von 16 auf 20 im test- und release-workflow geändert\naktualisierte pakete",
+                "ru": "изменил версию узла с 16 до 20 в тесте и выпуске рабочего процесса\nобновления пакетов",
+                "pt": "mudou a versão do nó de 16 a 20 em fluxo de trabalho de teste e lançamento\npacotes atualizados",
+                "nl": "veranderde de node versie van 16 naar 20 in test en release workflow\nbijgewerkte pakketten",
+                "fr": "a changé la version du nœud de 16 à 20 dans le flux de travail de test et de publication\npaquets mis à jour",
+                "it": "ha cambiato la versione nodo da 16 a 20 in prova e il flusso di lavoro di rilascio\npacchetti aggiornati",
+                "es": "cambió la versión del nodo de 16 a 20 en el flujo de trabajo de prueba y liberación\npaquetes actualizados",
+                "pl": "zmienił wersję węzła z 16 do 20 w pracy testowej i zwalniającej\nzaktualizowane pakiety",
+                "uk": "змінено версію вузла від 16 до 20 у тестовому режимі\nоновлені пакети",
+                "zh-cn": "在测试和发布工作流程中将节点版本从16个改为20个\n更新软件包"
+            },
+            "1.0.0": {
+                "en": "updated packages",
+                "de": "aktualisierte pakete",
+                "ru": "обновления пакетов",
+                "pt": "pacotes atualizados",
+                "nl": "bijgewerkte pakketten",
+                "fr": "paquets mis à jour",
+                "it": "pacchetti aggiornati",
+                "es": "paquetes actualizados",
+                "pl": "zaktualizowane pakiety",
+                "uk": "оновлені пакети",
+                "zh-cn": "更新软件包"
+            },
+            "0.2.1": {
+                "en": "update packages",
+                "de": "update-pakete",
+                "ru": "обновление пакетов",
+                "pt": "pacotes de atualização",
+                "nl": "vertaling:",
+                "fr": "mettre à jour les paquets",
+                "it": "pacchetti di aggiornamento",
+                "es": "actualizar paquetes",
+                "pl": "pakiet aktualizacji",
+                "uk": "оновлення пакетів",
+                "zh-cn": "更新包"
+            },
+            "0.2.0": {
+                "en": "Added CI tests",
+                "de": "CI-Tests",
+                "ru": "Добавлены CI тесты",
+                "pt": "Adicionados testes de IC",
+                "nl": "Toegevoegd CI testen",
+                "fr": "Essais CI ajoutés",
+                "it": "Test CI aggiunti",
+                "es": "Pruebas de CI adicionales",
+                "pl": "Added CI test",
+                "uk": "Додано тести CI",
+                "zh-cn": "增加CI试验"
+            }
+        },
+        "title": "vis-2-widgets-react-template.org",
+        "titleLang": {
+            "en": "Vis-Widget template",
+            "de": "Vis-Widget template",
+            "ru": "Vis-Widget template",
+            "pt": "Vis-Widget template",
+            "nl": "Vis-Widget template",
+            "fr": "Vis-Widget template",
+            "it": "Vis-Widget template",
+            "es": "Vis-Widget template",
+            "pl": "Vis-Widget template",
+            "zh-cn": "Vis-Widget template"
+        },
+        "desc": {
+            "en": "Vis-Widget template",
+            "de": "Vis-Widget template",
+            "ru": "Vis-Widget template",
+            "pt": "Vis-Widget template",
+            "nl": "Vis-Widget template",
+            "fr": "Vis-Widget template",
+            "it": "Vis-Widget template",
+            "es": "Vis-Widget template",
+            "pl": "Vis-Widget template",
+            "zh-cn": "Vis-Widget template"
+        },
+        "authors": ["bluefox <dogafox@gmail.com>"],
+        "keywords": ["vis-2-widgets-react-template"],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "icon": "vis-2-widgets-react-template.svg",
+        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-react-template/master/admin/vis-2-widgets-react-template.svg",
+        "enabled": true,
+        "readme": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "once",
+        "adminUI": {
+            "config": "none"
+        },
+        "onlyWWW": true,
+        "licenseInformation": {
+            "type": "free",
+            "license": "MIT"
+        },
+        "tier": 3,
+        "type": "visualization-widgets",
+        "connectionType": "cloud",
+        "dataSource": "poll",
+        "visWidgets": {
+            "vis2DemoWidget": {
+                "i18n": "component",
+                "name": "vis2DemoWidget",
+                "url": "vis-2-widgets-react-template/customWidgets.js",
+                "bundlerType": "module",
+                "bundlerTypeComment": "Set bundlerType only for TypeScript or vite widgets",
+                "components": ["DemoWidget"]
+            },
+            "vis2DemoIconSet": {
+                "iconSet": true,
+                "name": {
+                    "en": "Demo icon set",
+                    "de": "Demo-Icon-Set",
+                    "ru": "Набор иконок Demo",
+                    "pt": "Conjunto de ícones Demo",
+                    "nl": "Demo-pictogramset",
+                    "fr": "Ensemble d'icônes de démonstration",
+                    "it": "Set di icone Demo",
+                    "es": "Conjunto de iconos de demostración",
+                    "pl": "Zestaw ikon Demo",
+                    "uk": "Демо-набір іконок",
+                    "zh-cn": "演示图标集"
+                },
+                "url": "vis-2-widgets-react-template/icon-set.json",
+                "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODEiIGhlaWdodD0iODEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0ibm9uZSI+ICAgIDxwYXRoIGZpbGw9IndoaXRlIiBkPSJtNzIuNDQyMiw3MS4wNDUxMmM0LjE0MDYsLTYuMTM5NiA2LjU1NzgsLTEzLjUzNzUgNi41NTc4LC0yMS41YzAsLTIxLjI2MyAtMTcuMjM3LC0zOC41IC0zOC41LC0zOC41Yy0yMS4yNjMsMCAtMzguNSwxNy4yMzcgLTM4LjUsMzguNWMwLDcuOTYyNSAyLjQxNzIsMTUuMzYwNCA2LjU1Nzg0LDIxLjVsNjMuODg0MzYsMHoiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbC1ydWxlPSJldmVub2RkIi8+ICAgIDxwYXRoIGZpbGw9IiMzM0RENTIiIGQ9Im02OS42ODYyLDcxLjQ2NzAyYzQuNTkyMSwtNi4xMDQxIDcuMzEzOCwtMTMuNjk1MiA3LjMxMzgsLTIxLjkyMTljMCwtMjAuMTU4NCAtMTYuMzQxNiwtMzYuNSAtMzYuNSwtMzYuNWMtMjAuMTU4NCwwIC0zNi41LDE2LjM0MTYgLTM2LjUsMzYuNWMwLDguMjI2NyAyLjcyMTY5LDE1LjgxNzggNy4zMTM4LDIxLjkyMTlsLTQuODczNzIsMGMtNC4wNzUxOSwtNi4zMTg2IC02LjQ0MDA4LC0xMy44NDQxIC02LjQ0MDA4LC0yMS45MjE5YzAsLTIyLjM2NzUgMTguMTMyNSwtNDAuNSA0MC41LC00MC41YzIyLjM2NzUsMCA0MC41LDE4LjEzMjUgNDAuNSw0MC41YzAsOC4wNzc4IC0yLjM2NDksMTUuNjAzMyAtNi40NDAxLDIxLjkyMTlsLTQuODczNywweiIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz4gICAgPGxpbmUgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2U9IiMzM0RENTIiIHkyPSI2OS40NjcwMiIgeDI9Ijc0LjMxMTQiIHkxPSI2OS40NjcwMiIgeDE9IjcuNDMwNjYiLz4gICAgPHBhdGggc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iIzMzREQ1MiIgZD0ibTcyLjQ2NTcsNDYuMjE5OTJjMC4zNDA4LDQuODA2NCAtMC41MDkzLDkuNjE3MSAtMi40NzQ4LDE0LjAzODZjLTAuMjAyOSwwLjQ1NjUgLTAuNzM5NiwwLjY1MjYgLTEuMTk2MSwwLjQ0OTVsMCwwYy0wLjQ3NjIsLTAuMjExNyAtMC42ODE4LC0wLjc3NDcgLTAuNDcxOSwtMS4yNTE4YzEuODE5LC00LjEzNDcgMi42MDQxLC04LjYyNzEgMi4yODU5LC0xMy4xMTU2Yy0wLjM0MDYsLTQuODAzNCAtMS45MzM4LC05LjQ0NzggLTQuNjMyOCwtMTMuNTA0OWMtMi42OTksLTQuMDU3MSAtNi40MTY5LC03LjM5NjQgLTEwLjgxMSwtOS43MWMtNC4zOTQsLTIuMzEzNiAtOS4zMjI4LC0zLjUyNzEgLTE0LjMzMiwtMy41Mjg3Yy01LjAwOTIsLTAuMDAxNSAtOS45Mzc1LDEuMjA5IC0xNC4zMzA3LDMuNTJjLTQuMzkzMSwyLjMxMDkgLTguMTA5Nyw1LjY0OCAtMTAuODA3MSw5LjcwMzRjLTIuNjk3NSw0LjA1NTUgLTQuMjg4OSw4LjY5ODggLTQuNjI3NiwxMy41MDIxYy0wLjMxNjUsNC40ODgzIDAuNDcwNCw4Ljk4MTMgMi4yOTEsMTMuMTE3MWMwLjIxLDAuNDc3MSAwLjAwNDQsMS4wNDAxIC0wLjQ3MiwxLjI1MTdsMCwwYy0wLjQ1NjIsMC4yMDI2IC0wLjk5MjMsMC4wMDY3IC0xLjE5NTIsLTAuNDQ5NGMtMS45Njc1NywtNC40MjMgLTIuODE5NzQsLTkuMjM0NiAtMi40ODA3OSwtMTQuMDQxM2MwLjM1OTg0LC01LjEwMjggMi4wNTA0OSwtMTAuMDM1OCA0LjkxNjE5LC0xNC4zNDQzYzIuODY1NywtNC4zMDg0IDYuODE0MSwtNy44NTM2IDExLjQ4MTMsLTEwLjMwODdjNC42NjcyLC0yLjQ1NTEgOS45MDI5LC0zLjc0MTA4IDE1LjIyNDYsLTMuNzM5NDZjNS4zMjE2LDAuMDAxNjIgMTAuNTU3OCwxLjI5MDg2IDE1LjIyNiwzLjc0ODc2YzQuNjY4MSwyLjQ1OCA4LjYxNzksNi4wMDU1IDExLjQ4NTMsMTAuMzE1N2MyLjg2NzMsNC4zMTAyIDQuNTU5OSw5LjI0NDIgNC45MjE3LDE0LjM0NzN6Ii8+ICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlPSIjMzNERDUyIiBkPSJtNDMuNzg2NzQsNTQuNDA3MjJjMS4wOTYxLDEuMzAxOSAxLjI2NDIsMi4zNzE3IDEuMDkzNiwzLjIyMzVjLTAuMTg1MiwwLjkyNDggLTAuODI4MywxLjg3NjYgLTEuODYzMywyLjc0NzljLTEuMDMzMSwwLjg2OTggLTEuOTEzMSwxLjIwMjggLTIuNjY2LDEuMTY0NGMtMC43MjYxLC0wLjAzNzEgLTEuNjg5MywtMC40MzkzIC0yLjg2MjgsLTEuODMzMmMtMC41OCwtMC42ODg5IC0xLjc2NjcsLTIuNTA1MSAtMy4yOTcsLTUuMDEwOGMtMS41MDMsLTIuNDYxIC0zLjI3MjUsLTUuNDc3OCAtNC45OTM5LC04LjQ3NThjLTEuNTIwMSwtMi42NDc2IC0yLjk4NDcsLTUuMjQ5NCAtNC4xOSwtNy40Mjk0YzIuMDExNywxLjUzNDIgNC4zODgsMy4zOTQ3IDYuNzczMSw1LjMwNDJjMi43MDQsMi4xNjQ4IDUuNDEwNyw0LjM4NTcgNy42MDM4LDYuMjU5NGMyLjIzNTcsMS45MSAzLjgyOTYsMy4zNjkzIDQuNDAyNSw0LjA0OTh6Ii8+ICAgIDxwYXRoIGZpbGw9IiMzM0RENTIiIGQ9Im0yMC44NTQzNCwzNC4wNTIxMmw2LjYzNTYsNC42OTY4bC0xLjM2MDgsMS4yNjRsLTEuNDY5NywxLjM4MWwtMy44MDUxLC03LjM0MTh6Ii8+PC9zdmc+"
+            }
+        },
+        "restartAdapters": ["vis-2"]
     },
-    "title": "vis-2-widgets-react-template.org",
-    "titleLang": {
-      "en": "Vis-Widget template",
-      "de": "Vis-Widget template",
-      "ru": "Vis-Widget template",
-      "pt": "Vis-Widget template",
-      "nl": "Vis-Widget template",
-      "fr": "Vis-Widget template",
-      "it": "Vis-Widget template",
-      "es": "Vis-Widget template",
-      "pl": "Vis-Widget template",
-      "zh-cn": "Vis-Widget template"
-    },
-    "desc": {
-      "en": "Vis-Widget template",
-      "de": "Vis-Widget template",
-      "ru": "Vis-Widget template",
-      "pt": "Vis-Widget template",
-      "nl": "Vis-Widget template",
-      "fr": "Vis-Widget template",
-      "it": "Vis-Widget template",
-      "es": "Vis-Widget template",
-      "pl": "Vis-Widget template",
-      "zh-cn": "Vis-Widget template"
-    },
-    "authors": [
-      "bluefox <dogafox@gmail.com>"
-    ],
-    "keywords": [
-      "vis-2-widgets-react-template"
-    ],
-    "license": "MIT",
-    "platform": "Javascript/Node.js",
-    "icon": "vis-2-widgets-react-template.svg",
-    "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-react-template/master/admin/vis-2-widgets-react-template.svg",
-    "enabled": true,
-    "readme": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template/blob/master/README.md",
-    "loglevel": "info",
-    "mode": "once",
-    "adminUI": {
-      "config": "none"
-    },
-    "onlyWWW": true,
-    "licenseInformation": {
-      "type": "free",
-      "license": "MIT"
-    },
-    "tier": 3,
-    "type": "visualization-widgets",
-    "connectionType": "cloud",
-    "dataSource": "poll",
-    "visWidgets": {
-      "vis2DemoWidget": {
-        "i18n": "component",
-        "name": "vis2DemoWidget",
-        "url": "vis-2-widgets-react-template/customWidgets.js",
-        "bundlerType": "module",
-        "bundlerTypeComment": "Set bundlerType only for TypeScript or vite widgets",
-        "components": [
-          "DemoWidget"
-        ]
-      }
-    },
-    "restartAdapters": [
-      "vis-2"
-    ]
-  },
-  "native": {},
-  "objects": [],
-  "instanceObjects": []
+    "native": {},
+    "objects": [],
+    "instanceObjects": []
 }
