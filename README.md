@@ -145,7 +145,7 @@ To add an icon set, please do the following steps:
             "zh-cn": "演示图标集"
         },
         "url": "<YOUR_ADAPTER_NAME>/icon-set.json", // URL to the icon set file (important: must end with .json)
-        // Optional logo for widget set
+        // Optional logo for widget set (with data:image/svg+xml;)
         "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODEiIGhlaWdodD0iODEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbD0ibm9uZSI+ICAgIDxwYXRoIGZpbGw9IndoaXRlIiBkPSJtNzIuNDQyMiw3MS4wNDUxMmM0LjE0MDYsLTYuMTM5NiA2LjU1NzgsLTEzLjUzNzUgNi41NTc4LC0yMS41YzAsLTIxLjI2MyAtMTcuMjM3LC0zOC41IC0zOC41LC0zOC41Yy0yMS4yNjMsMCAtMzguNSwxNy4yMzcgLTM4LjUsMzguNWMwLDcuOTYyNSAyLjQxNzIsMTUuMzYwNCA2LjU1Nzg0LDIxLjVsNjMuODg0MzYsMHoiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbC1ydWxlPSJldmVub2RkIi8+ICAgIDxwYXRoIGZpbGw9IiMzM0RENTIiIGQ9Im02OS42ODYyLDcxLjQ2NzAyYzQuNTkyMSwtNi4xMDQxIDcuMzEzOCwtMTMuNjk1MiA3LjMxMzgsLTIxLjkyMTljMCwtMjAuMTU4NCAtMTYuMzQxNiwtMzYuNSAtMzYuNSwtMzYuNWMtMjAuMTU4NCwwIC0zNi41LDE2LjM0MTYgLTM2LjUsMzYuNWMwLDguMjI2NyAyLjcyMTY5LDE1LjgxNzggNy4zMTM4LDIxLjkyMTlsLTQuODczNzIsMGMtNC4wNzUxOSwtNi4zMTg2IC02LjQ0MDA4LC0xMy44NDQxIC02LjQ0MDA4LC0yMS45MjE5YzAsLTIyLjM2NzUgMTguMTMyNSwtNDAuNSA0MC41LC00MC41YzIyLjM2NzUsMCA0MC41LDE4LjEzMjUgNDAuNSw0MC41YzAsOC4wNzc4IC0yLjM2NDksMTUuNjAzMyAtNi40NDAxLDIxLjkyMTlsLTQuODczNywweiIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz4gICAgPGxpbmUgc3Ryb2tlLXdpZHRoPSI0IiBzdHJva2U9IiMzM0RENTIiIHkyPSI2OS40NjcwMiIgeDI9Ijc0LjMxMTQiIHkxPSI2OS40NjcwMiIgeDE9IjcuNDMwNjYiLz4gICAgPHBhdGggc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZT0iIzMzREQ1MiIgZD0ibTcyLjQ2NTcsNDYuMjE5OTJjMC4zNDA4LDQuODA2NCAtMC41MDkzLDkuNjE3MSAtMi40NzQ4LDE0LjAzODZjLTAuMjAyOSwwLjQ1NjUgLTAuNzM5NiwwLjY1MjYgLTEuMTk2MSwwLjQ0OTVsMCwwYy0wLjQ3NjIsLTAuMjExNyAtMC42ODE4LC0wLjc3NDcgLTAuNDcxOSwtMS4yNTE4YzEuODE5LC00LjEzNDcgMi42MDQxLC04LjYyNzEgMi4yODU5LC0xMy4xMTU2Yy0wLjM0MDYsLTQuODAzNCAtMS45MzM4LC05LjQ0NzggLTQuNjMyOCwtMTMuNTA0OWMtMi42OTksLTQuMDU3MSAtNi40MTY5LC03LjM5NjQgLTEwLjgxMSwtOS43MWMtNC4zOTQsLTIuMzEzNiAtOS4zMjI4LC0zLjUyNzEgLTE0LjMzMiwtMy41Mjg3Yy01LjAwOTIsLTAuMDAxNSAtOS45Mzc1LDEuMjA5IC0xNC4zMzA3LDMuNTJjLTQuMzkzMSwyLjMxMDkgLTguMTA5Nyw1LjY0OCAtMTAuODA3MSw5LjcwMzRjLTIuNjk3NSw0LjA1NTUgLTQuMjg4OSw4LjY5ODggLTQuNjI3NiwxMy41MDIxYy0wLjMxNjUsNC40ODgzIDAuNDcwNCw4Ljk4MTMgMi4yOTEsMTMuMTE3MWMwLjIxLDAuNDc3MSAwLjAwNDQsMS4wNDAxIC0wLjQ3MiwxLjI1MTdsMCwwYy0wLjQ1NjIsMC4yMDI2IC0wLjk5MjMsMC4wMDY3IC0xLjE5NTIsLTAuNDQ5NGMtMS45Njc1NywtNC40MjMgLTIuODE5NzQsLTkuMjM0NiAtMi40ODA3OSwtMTQuMDQxM2MwLjM1OTg0LC01LjEwMjggMi4wNTA0OSwtMTAuMDM1OCA0LjkxNjE5LC0xNC4zNDQzYzIuODY1NywtNC4zMDg0IDYuODE0MSwtNy44NTM2IDExLjQ4MTMsLTEwLjMwODdjNC42NjcyLC0yLjQ1NTEgOS45MDI5LC0zLjc0MTA4IDE1LjIyNDYsLTMuNzM5NDZjNS4zMjE2LDAuMDAxNjIgMTAuNTU3OCwxLjI5MDg2IDE1LjIyNiwzLjc0ODc2YzQuNjY4MSwyLjQ1OCA4LjYxNzksNi4wMDU1IDExLjQ4NTMsMTAuMzE1N2MyLjg2NzMsNC4zMTAyIDQuNTU5OSw5LjI0NDIgNC45MjE3LDE0LjM0NzN6Ii8+ICAgIDxwYXRoIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlPSIjMzNERDUyIiBkPSJtNDMuNzg2NzQsNTQuNDA3MjJjMS4wOTYxLDEuMzAxOSAxLjI2NDIsMi4zNzE3IDEuMDkzNiwzLjIyMzVjLTAuMTg1MiwwLjkyNDggLTAuODI4MywxLjg3NjYgLTEuODYzMywyLjc0NzljLTEuMDMzMSwwLjg2OTggLTEuOTEzMSwxLjIwMjggLTIuNjY2LDEuMTY0NGMtMC43MjYxLC0wLjAzNzEgLTEuNjg5MywtMC40MzkzIC0yLjg2MjgsLTEuODMzMmMtMC41OCwtMC42ODg5IC0xLjc2NjcsLTIuNTA1MSAtMy4yOTcsLTUuMDEwOGMtMS41MDMsLTIuNDYxIC0zLjI3MjUsLTUuNDc3OCAtNC45OTM5LC04LjQ3NThjLTEuNTIwMSwtMi42NDc2IC0yLjk4NDcsLTUuMjQ5NCAtNC4xOSwtNy40Mjk0YzIuMDExNywxLjUzNDIgNC4zODgsMy4zOTQ3IDYuNzczMSw1LjMwNDJjMi43MDQsMi4xNjQ4IDUuNDEwNyw0LjM4NTcgNy42MDM4LDYuMjU5NGMyLjIzNTcsMS45MSAzLjgyOTYsMy4zNjkzIDQuNDAyNSw0LjA0OTh6Ii8+ICAgIDxwYXRoIGZpbGw9IiMzM0RENTIiIGQ9Im0yMC44NTQzNCwzNC4wNTIxMmw2LjYzNTYsNC42OTY4bC0xLjM2MDgsMS4yNjRsLTEuNDY5NywxLjM4MWwtMy44MDUxLC03LjM0MTh6Ii8+PC9zdmc+"
     }
 }
@@ -156,12 +156,12 @@ Add file `icon-set.json` (name must be equal to the entered one in `io-package.j
 ```json5
 {
     iconName1: {
-        src: 'PCEtLQp0YWdzOiBbZ.... base64 content of SVG without data:image/...',
+        src: 'PCEtLQp0YWdzOiBbZ.... base64 content of SVG without data:image/...', // without! data:image/svg+xml;
         keywords: ['Arrow', 'Content'], // optional keywords for search
         name: 'Arrow Autofit Content', // optional name. could be a string or an object with translations
     },
     iconName2: {
-        src: 'PCEtLQp0YWdzOiBbZGl.... base64 content of SVG without data:image/...',
+        src: 'PCEtLQp0YWdzOiBbZGl.... base64 content of SVG without data:image/...', // without! data:image/svg+xml;
         keywords: ['Arrow', 'Down'], // optional keywords for search
         name: 'Arrow Autofit Down', // optional name. could be a string or an object with translations
     },
