@@ -175,13 +175,15 @@ See an [example](src-widgets-ts/src-icon-set/combine.js) how to create such a fi
 <!--
     ### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+- (@GermanBluefox) Added Icon Set example
+
 ### 1.2.0 (2025-06-06)
 
 - (oweitman) add js/vite support
 - (oweitman) improve documentation
 - (oweitman) small fixes
 - (oweitman) debugging description for vite
-- (@GermanBluefox) Added Icon Set example
 
 ### 1.1.1 (2025-06-02)
 
