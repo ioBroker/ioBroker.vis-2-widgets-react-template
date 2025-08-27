@@ -101,7 +101,7 @@ dev-server watch --noStart
 npm run start
 ```
 
-- You can then open a browser instance using one of the two launch configurations. Breakpoints can be set in vscode, which will then also stop vscode.
+- You can then open a browser instance using one of the two launch configurations. Dont forget to adjust the webRoot-property according to the name of your src-widget directory. Breakpoints can be set in vscode, which will then also stop vscode.
 
 ## VSCode launch.json
 
