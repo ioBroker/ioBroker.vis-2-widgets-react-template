@@ -73,7 +73,13 @@ For debugging, please see [Debugging](#debugging-with-vite-typescript-or-javascr
 
 To be able to debug with vite and TypeScript/JavaScript, vis-2 and the vis-2-react-widget adapter to be developed must each be running in vite dev mode.
 
-To do this, perform the following steps:
+In preparation, you must:
+
+- install the web adapter in iobroker
+- install the vis-2 adapter in iobroker
+- start vis-2 in the editor to create a corresponding project.
+
+Then follow these steps:
 
 - Install vis-2 according to the following description:
   <https://github.com/ioBroker/ioBroker.vis-2?tab=readme-ov-file#development-and-debugging>
@@ -95,9 +101,28 @@ dev-server watch --noStart
 npm run start
 ```
 
-- You can then open a browser instance using one of the two launch configurations. Breakpoints can be set in vscode, which will then also stop vscode.
+- You can then open a browser instance using one of the two launch configurations. Dont forget to adjust the webRoot-property according to the name of your src-widget directory. Breakpoints can be set in vscode, which will then also stop vscode.
 
-## VSCode launch.json
+### Compatibility
+
+To ensure compatibility between vis-2 and the vis-2 widget during development, the following libraries should be the same versions as in vis-2:
+
+- @iobroker/adapter-react-v5
+- @iobroker/types-vis-2
+- @module-federation/vite
+- @mui/icons-material
+- @mui/material
+- @vitejs/plugin-react
+- react
+- react-dom
+- sass
+- typescript
+- vite
+- vite-plugin-commonjs
+- vite-plugin-svgr
+- vite-tsconfig-paths
+
+### VSCode launch.json
 
 Adjust the webroot path to match your widget source.
 This launch configuration is only valid for debugging with vite.
@@ -174,6 +199,12 @@ See an [example](src-widgets-ts/src-icon-set/combine.js) how to create such a fi
 <!--
     ### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+
+- (oweitman) improve documentation
+- (oweitman) add missing eslint file to prevent markdown formating errors
+
 ### 1.3.1 (2025-08-24)
 - (@GermanBluefox) Added Icon Set example
 
