@@ -103,7 +103,26 @@ npm run start
 
 - You can then open a browser instance using one of the two launch configurations. Dont forget to adjust the webRoot-property according to the name of your src-widget directory. Breakpoints can be set in vscode, which will then also stop vscode.
 
-## VSCode launch.json
+### Compatibility
+
+To ensure compatibility between vis-2 and the vis-2 widget during development, the following libraries should be the same versions as in vis-2:
+
+- @iobroker/adapter-react-v5
+- @iobroker/types-vis-2
+- @module-federation/vite
+- @mui/icons-material
+- @mui/material
+- @vitejs/plugin-react
+- react
+- react-dom
+- sass
+- typescript
+- vite
+- vite-plugin-commonjs
+- vite-plugin-svgr
+- vite-tsconfig-paths
+
+### VSCode launch.json
 
 Adjust the webroot path to match your widget source.
 This launch configuration is only valid for debugging with vite.
