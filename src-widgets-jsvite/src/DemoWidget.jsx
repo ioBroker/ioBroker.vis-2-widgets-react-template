@@ -34,7 +34,7 @@ export default class DemoWidget extends window.visRxWidget {
                         },
                     ],
                 },
-                // check here all possible types https://github.com/ioBroker/ioBroker.vis/blob/react/src/src/Attributes/Widget/SCHEMA.md
+                // check here all possible types https://github.com/ioBroker/ioBroker.vis-2/blob/master/packages/iobroker.vis-2/src-vis/src/Attributes/Widget/SCHEMA.md
             ],
             visPrev: 'widgets/vis-2-widgets-react-template/img/vis-widget-demo.png',
         };
@@ -48,7 +48,7 @@ export default class DemoWidget extends window.visRxWidget {
         // 2. this.state.rxData - contains all widget data with replaced bindings. E.g. if this.state.data.type is `{system.adapter.admin.0.alive}`,
         //                        then this.state.rxData.type will have state value of `system.adapter.admin.0.alive`
         // 3. this.state.rxStyle - contains all widget styles with replaced bindings. E.g. if this.state.styles.width is `{javascript.0.width}px`,
-        //                        then this.state.rxData.type will have state value of `javascript.0.width` + 'px
+        //                        then this.state.rxStyle.width will have state value of `javascript.0.width` + 'px'
     }
 
     componentDidMount() {
@@ -63,7 +63,7 @@ export default class DemoWidget extends window.visRxWidget {
     getWidgetInfo() {
         return DemoWidget.getWidgetInfo();
     }
-    // If the "prefix" attribute in translations.ts is true or string, you must implement this function.
+    // If the "prefix" attribute in translations.js is true or string, you must implement this function.
     // If true, the adapter name + _ is used.
     // If string, then this function must return exactly that string
     static getI18nPrefix() {

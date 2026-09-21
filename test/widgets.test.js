@@ -1,27 +1,32 @@
 const helper = require('@iobroker/vis-2-widgets-testing');
 
-describe('vis-2-widgets-react-template', () => {
+// name of the widget set, e.g. `vis-2-widgets-react-template`
+const adapterName = require('../package.json').name.split('.').pop();
+
+describe(adapterName, () => {
     before(async function () {
         this.timeout(180000);
-        // install js-controller, web and vis-2-beta
+        // install js-controller, web and vis-2
         await helper.startIoBroker();
-        await helper.startBrowser(process.env.CI === 'true' ? 'new' : false);
+        await helper.startBrowser(process.env.CI === 'true');
         await helper.createProject();
 
         // open widgets
-        await helper.palette.openWidgetSet(null, 'vis-2-widgets-react-template');
+        await helper.palette.openWidgetSet(null, adapterName);
         await helper.screenshot(null, '02_widgets_opened');
     });
 
     it('Check Demo widget', async function () {
         this.timeout(60000);
-        const widgets = await helper.palette.getListOfWidgets(null, 'demo');
-        for (let w = 0; w < widgets.length; w++) {
-            const wid = await helper.palette.addWidget(null, widgets[w], true);
-            await helper.screenshot(null, `10_${widgets[w]}`);
+        const widgets = await helper.palette.getListOfWidgets(null, adapterName);
+        if (!widgets.length) {
+            throw new Error(`No widgets of "${adapterName}" found in the palette`);
+        }
+        for (const widgetName of widgets) {
+            const wid = await helper.palette.addWidget(null, widgetName);
+            await helper.screenshot(null, `10_${widgetName}`);
             await helper.view.deleteWidget(null, wid);
         }
-        return Promise.resolve();
     });
 
     after(async function () {

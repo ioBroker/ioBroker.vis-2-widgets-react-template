@@ -7,7 +7,7 @@ export default [
         languageOptions: {
             parserOptions: {
                 projectService: {
-                    allowDefaultProject: ['*.js', '*.mjs'],
+                    allowDefaultProject: ['*.js', '*.mjs', 'src-icon-set/*.js'],
                 },
                 tsconfigRootDir: import.meta.dirname,
             },
@@ -15,16 +15,7 @@ export default [
     },
     {
         // specify files to exclude from linting here
-        ignores: [
-            'build/',
-            'node_modules/',
-            '.__mf__temp/',
-            'vite.config.*',
-            'vite-env.d.ts',
-            'public/',
-            'src/Components/blockly-plugins/**/*',
-            'src/Components/BlocklyEditorTS.tsx',
-        ],
+        ignores: ['build/', 'node_modules/', '.__mf__temp/', 'vite.config.*', 'vite-env.d.ts', 'public/'],
     },
     {
         // disable temporary the rule 'jsdoc/require-param' and enable 'jsdoc/require-jsdoc'

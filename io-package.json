@@ -106,6 +106,7 @@
       "it": "Vis-Widget template",
       "es": "Vis-Widget template",
       "pl": "Vis-Widget template",
+      "uk": "Vis-Widget template",
       "zh-cn": "Vis-Widget template"
     },
     "desc": {
@@ -118,6 +119,7 @@
       "it": "Vis-Widget template",
       "es": "Vis-Widget template",
       "pl": "Vis-Widget template",
+      "uk": "Vis-Widget template",
       "zh-cn": "Vis-Widget template"
     },
     "authors": [
@@ -129,9 +131,9 @@
     "license": "MIT",
     "platform": "Javascript/Node.js",
     "icon": "vis-2-widgets-react-template.svg",
-    "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-react-template/master/admin/vis-2-widgets-react-template.svg",
+    "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.vis-2-widgets-react-template/main/admin/vis-2-widgets-react-template.svg",
     "enabled": true,
-    "readme": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template/blob/master/README.md",
+    "readme": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template/blob/main/README.md",
     "loglevel": "info",
     "mode": "once",
     "adminUI": {
@@ -152,7 +154,7 @@
         "name": "vis2DemoWidget",
         "url": "vis-2-widgets-react-template/customWidgets.js",
         "bundlerType": "module",
-        "bundlerTypeComment": "Set bundlerType only for TypeScript or vite widgets",
+        "bundlerTypeComment": "bundlerType 'module' is required for widgets built with vite and @module-federation/vite",
         "components": [
           "DemoWidget"
         ]
@@ -160,7 +162,6 @@
     },
     "visIconSets": {
       "vis2DemoIconSet": {
-        "iconSet": true,
         "name": {
           "en": "Demo icon set",
           "de": "Demo-Icon-Set",

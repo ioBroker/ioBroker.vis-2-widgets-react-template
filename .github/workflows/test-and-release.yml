@@ -31,15 +31,19 @@ jobs:
         steps:
             - uses: actions/checkout@v7
 
-            - name: Use Node.js 20.x
+            - name: Use Node.js 22.x
               uses: actions/setup-node@v6
               with:
-                  node-version: 20.x
+                  node-version: 22.x
 
             - name: Install Dependencies
               run: npm i
 
-            - name: Build
+            - name: Build JavaScript (vite) project
+              run: npm run build-jsv
+
+            # The TypeScript project is built last, so the tests run against it
+            - name: Build TypeScript project
               run: npm run build
 
             - name: Run local tests
@@ -63,31 +67,20 @@ jobs:
             github.event_name == 'push' &&
             startsWith(github.ref, 'refs/tags/')
         runs-on: ubuntu-latest
+        permissions:
+            # required to create the GitHub release
+            contents: write
         steps:
             - name: Checkout code
               uses: actions/checkout@v7
 
-            - name: Use Node.js 20.x
+            - name: Use Node.js 22.x
               uses: actions/setup-node@v6
               with:
-                  node-version: 20.x
+                  node-version: 22.x
 
             - name: Install Dependencies
               run: npm i
-
-            - name: Extract the version and commit body from the tag
-              id: extract_release
-              # The body may be multiline, therefore we need to escape some characters
-              run: |
-                  VERSION="${{ github.ref }}"
-                  VERSION=${VERSION##*/}
-                  VERSION=${VERSION##*v}
-                  echo "::set-output name=VERSION::$VERSION"
-                  BODY=$(git show -s --format=%b)
-                  BODY="${BODY//'%'/'%25'}"
-                  BODY="${BODY//$'\n'/'%0A'}"
-                  BODY="${BODY//$'\r'/'%0D'}"
-                  echo "::set-output name=BODY::$BODY"
 
             #      - name: Create a clean build
             #        run: npm run build
@@ -97,17 +90,16 @@ jobs:
                   npm whoami
                   npm publish
 
-            - name: Create Github Release
-              uses: actions/create-release@v1
+            - name: Create GitHub release
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-              with:
-                  tag_name: ${{ github.ref }}
-                  release_name: Release v${{ steps.extract_release.outputs.VERSION }}
-                  draft: false
-                  # Prerelease versions create pre-releases on GitHub
-                  prerelease: ${{ contains(steps.extract_release.outputs.VERSION, '-') }}
-                  body: ${{ steps.extract_release.outputs.BODY }}
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              # The release notes are the body of the release commit. Pre-release versions create pre-releases on GitHub
+              run: |
+                  VERSION="${GITHUB_REF_NAME#v}"
+                  PRERELEASE=""
+                  if [[ "$VERSION" == *-* ]]; then PRERELEASE="--prerelease"; fi
+                  git show -s --format=%b > "$RUNNER_TEMP/release-notes.md"
+                  gh release create "$GITHUB_REF_NAME" --title "Release v$VERSION" --notes-file "$RUNNER_TEMP/release-notes.md" $PRERELEASE
 #      - name: Notify Sentry.io about the release
 #        run: |
 #          npm i -g @sentry/cli

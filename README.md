@@ -4,7 +4,12 @@
 
 This is only for development purposes, and it could be used as a basis for own vis-2 widget's development.
 
-This example consists of two projects: JavaScript (src-widgets-js) and TypeScript (src-widgets-ts).
+This example consists of two projects: TypeScript (`src-widgets-ts`) and JavaScript (`src-widgets-jsvite`).
+Both are built with vite and `@module-federation/vite`.
+
+Build the widgets with `npm run build` (TypeScript) or `npm run build-jsv` (JavaScript).
+The build checks the sources with `tsc`, bundles them with vite and copies the result to `widgets/<YOUR_ADAPTER_NAME>/`.
+The folder `widgets` is generated: it is deleted on every build and must not be edited by hand.
 
 ## Development with TypeScript
 
@@ -16,44 +21,17 @@ and file `admin/vis-2-widgets-react-template.svg` renamed too, you can start wit
 Some important places:
 
 1. `io-package.json` => `common.visWidgets`
-2. `src-widgets-ts/vite.config.ts` from line 13
+2. `src-widgets-ts/vite.config.ts` => `federation({ name, exposes })`: `name` must be equal to `common.visWidgets.<entry>.name` and `exposes` must list all widgets from `components` plus `./translations`
 3. File `DemoWidget.tsx`
 4. Check existence of attribute `"bundlerType": "module"` in `io-package.json`
 
-File in directory `src-widgets-ts/index.html` `src-widgets-ts/src/index.tsx` and is only to satisfy the compiler and will not be used in production.
+The files `src-widgets-ts/index.html` and `src-widgets-ts/src/index.tsx` are only there to satisfy the compiler and will not be used in production.
 
 For debugging, please see [Debugging](#debugging-with-vite-typescript-or-javascript)
 
-## Development with JavaScript + CRA
-
-It is not suggested to develop the widgets with JavaScript and CRA, but it is possible.
-
-After all entries with `vis-2-widgets-react-template` are replaced to your adapter name in `package.json`, `io-package.json`
-and file `admin/vis-2-widgets-react-template.png` renamed too, you can start with renaming of widgets.
-
-Some important places:
-
-1. `io-package.json` => `common.visWidgets`
-2. `src-widgets-js/modulefederation.config.js` from line 4
-3. File `DemoWidget.jsx`
-4. Check that attribute `bundlerType` in `io-package.json` is not set. (Important!)
-
-File in directory `src-widgets-js/src/index.jsx` is only to satisfy the compiler and will not be used in production.
-
-By development, you can start the script from `src-widgets-js` folder with `npm run start` command,
-and then on port 4173 you will see the demo widget.
-
-For faster development, you can:
-
-- start dev-server with installed web and vis-2 adapter with the following command `dev-server watch --noStart`. If your adapter contains adapter backend logic, start your adapter with a suitable launch configuration.
-- start in src-widgets-js: `npm run start`
-- write in object `system.adapter.vis-2-widgets-react-template.0`=>`common.visWidgets.vis2DemoWidget.url` to `http://localhost:4173/customWidgets.js`
-- Press F5 in `iobroker.vis-2` web page
-
 ## Development with JavaScript + vite
 
-It is suggested to develop the widgets with TypeScript.
-Compared to the solution JavaScript + CRA, vite is much faster and more resource-efficient in the build process
+It is suggested to develop the widgets with TypeScript, but JavaScript works with the same vite setup.
 
 After all entries with `vis-2-widgets-react-template` are replaced to your adapter name in `package.json`, `io-package.json`
 and file `admin/vis-2-widgets-react-template.svg` renamed too, you can start with renaming of widgets. (You can use PNG files too)
@@ -61,11 +39,11 @@ and file `admin/vis-2-widgets-react-template.svg` renamed too, you can start wit
 Some important places:
 
 1. `io-package.json` => `common.visWidgets`
-2. `src-widgets-jsvite/vite.config.ts` from line 13
+2. `src-widgets-jsvite/vite.config.ts` => `federation({ name, exposes })`: `name` must be equal to `common.visWidgets.<entry>.name` and `exposes` must list all widgets from `components` plus `./translations`
 3. File `DemoWidget.jsx`
 4. Check existence of attribute `"bundlerType": "module"` in `io-package.json`
 
-File in directory `src-widgets-jsvite/index.html` `src-widgets-jsvite/src/index.jsx` is only to satisfy the compiler and will not be used in production.
+The files `src-widgets-jsvite/index.html` and `src-widgets-jsvite/src/index.jsx` are only there to satisfy the compiler and will not be used in production.
 
 For debugging, please see [Debugging](#debugging-with-vite-typescript-or-javascript)
 
@@ -95,19 +73,20 @@ dev-server watch --noStart
 ```
 
 - write in object `system.adapter.vis-2-widgets-react-template.0`=>`common.visWidgets.vis2DemoWidget.url` to `http://localhost:4173/customWidgets.js`, with dev-server you have to upload the adapter with the `dev-server upload` command
-- Start the widgets adapter in the widgets-src directory in vite dev mode with the following command:
+- Start the widget project in vite dev mode in its directory (`src-widgets-ts` or `src-widgets-jsvite`) with the following command:
 
 ```shell
 npm run start
 ```
 
-- You can then open a browser instance using one of the two launch configurations. Dont forget to adjust the webRoot-property according to the name of your src-widget directory. Breakpoints can be set in vscode, which will then also stop vscode.
+- The dev server always uses port 4173 (`--strictPort`). If this port is already in use, it stops with an error instead of switching to another port that would not match the URL above.
+- You can then open a browser instance using one of the two launch configurations below. Don't forget to adjust the `webRoot` property to the name of your widget source directory. Breakpoints set in VS Code will then be hit.
 
 ### Compatibility
 
 To ensure compatibility between vis-2 and the vis-2 widget during development, the following libraries should be the same versions as in vis-2:
 
-- @iobroker/adapter-react-v5
+- @iobroker/gui-components
 - @iobroker/types-vis-2
 - @module-federation/vite
 - @mui/icons-material
@@ -115,12 +94,12 @@ To ensure compatibility between vis-2 and the vis-2 widget during development, t
 - @vitejs/plugin-react
 - react
 - react-dom
-- sass
 - typescript
 - vite
 - vite-plugin-commonjs
-- vite-plugin-svgr
-- vite-tsconfig-paths
+
+At runtime, vis-2 hands its own React and MUI to the widgets as shared singletons (see `moduleFederationShared` in `@iobroker/types-vis-2`),
+so the widgets always render with the versions of vis-2.
 
 ### VSCode launch.json
 
@@ -175,24 +154,28 @@ To add an icon set, please do the following steps:
 }
 ```
 
-Add file `icon-set.json` (name must be equal to the entered one in `io-package.json`) to the folder `widgets/<YOUR_ADAPTER_NAME>` with the following content:
+Put the file `icon-set.json` (the name must be equal to the one in `url` in `io-package.json`) into the `public` folder of your widget project (`src-widgets-ts/public/` or `src-widgets-jsvite/public/`).
+The build copies it to `widgets/<YOUR_ADAPTER_NAME>/`. Do not put it into `widgets/` directly, because this folder is deleted on every build.
+
+The file has the following content:
 
 ```json5
 {
     iconName1: {
         src: 'PCEtLQp0YWdzOiBbZ.... base64 content of SVG without data:image/...', // without! data:image/svg+xml;
-        keywords: ['Arrow', 'Content'], // optional keywords for search
+        words: ['Arrow', 'Content'], // optional keywords for search
         name: 'Arrow Autofit Content', // optional name. could be a string or an object with translations
     },
     iconName2: {
         src: 'PCEtLQp0YWdzOiBbZGl.... base64 content of SVG without data:image/...', // without! data:image/svg+xml;
-        keywords: ['Arrow', 'Down'], // optional keywords for search
+        words: ['Arrow', 'Down'], // optional keywords for search
         name: 'Arrow Autofit Down', // optional name. could be a string or an object with translations
     },
 }
 ```
 
-See an [example](src-widgets-ts/src-icon-set/combine.js) how to create such a file from SVG files.
+You can create this file from SVG files with the script [combine.js](src-widgets-ts/src-icon-set/combine.js):
+put your SVG files into `src-widgets-ts/src-icon-set/` and call `npm run icon-set` in `src-widgets-ts`. The result is written to `src-widgets-ts/public/icon-set.json`.
 
 ## Changelog
 
@@ -204,6 +187,9 @@ See an [example](src-widgets-ts/src-icon-set/combine.js) how to create such a fi
 
 - (oweitman) improve documentation
 - (oweitman) add missing eslint file to prevent markdown formating errors
+- (@GermanBluefox) Removed the JavaScript project based on CRA (craco). The JavaScript example is built with vite now
+- (@GermanBluefox) Fixed TypeScript configuration, lint configuration and the widget test
+- (@GermanBluefox) Fixed the format of the icon set file: keywords are stored in `words`
 
 ### 1.3.1 (2025-08-24)
 - (@GermanBluefox) Added Icon Set example

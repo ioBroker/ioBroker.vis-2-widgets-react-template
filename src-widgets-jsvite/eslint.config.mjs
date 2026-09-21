@@ -15,14 +15,7 @@ export default [
     },
     {
         // specify files to exclude from linting here
-        ignores: [
-            'build/',
-            'node_modules/',
-            '.__mf__temp/',
-            'vite.config.*',
-            'vite-env.d.ts',
-            'public/'
-        ],
+        ignores: ['build/', 'node_modules/', '.__mf__temp/', 'vite.config.*', 'vite-env.d.ts', 'public/'],
     },
     {
         // disable temporary the rule 'jsdoc/require-param' and enable 'jsdoc/require-jsdoc'

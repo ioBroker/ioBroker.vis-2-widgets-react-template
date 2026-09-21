@@ -2,63 +2,41 @@ const { existsSync } = require('node:fs');
 const adapterName = require('./package.json').name.replace('iobroker.', '');
 const { deleteFoldersRecursive, copyFiles, npmInstall, buildReact } = require('@iobroker/build-tools');
 
-// ------------------- tasks for typescript ----------------------
+/**
+ * Build one widget project and copy the result into `widgets/<adapterName>`
+ *
+ * @param {string} srcDir folder of the widget project relative to this file, e.g. `src-widgets-ts/`
+ */
+async function build(srcDir) {
+    const src = `${__dirname}/${srcDir}`;
 
-const SRC_TS = 'src-widgets-ts/';
-const src_ts = `${__dirname}/${SRC_TS}`;
-
-function tsClean() {
-    deleteFoldersRecursive(`${src_ts}build`);
+    deleteFoldersRecursive(`${src}build`);
     deleteFoldersRecursive(`${__dirname}/widgets`);
-}
 
-function tsCopyAllFiles() {
-    copyFiles([`${SRC_TS}build/customWidgets.js`], `widgets/${adapterName}`);
-    copyFiles([`${SRC_TS}build/icon-set.json`], `widgets/${adapterName}`);
-    copyFiles([`${SRC_TS}build/assets/*.*`], `widgets/${adapterName}/assets`);
-    copyFiles([`${SRC_TS}build/img/*`], `widgets/${adapterName}/img`);
-}
-
-if (process.argv.includes('--typescript') || process.argv.length === 2) {
-    tsClean();
-    let npmPromise;
-    if (existsSync(`${src_ts}/node_modules`)) {
-        npmPromise = Promise.resolve();
-    } else {
-        npmPromise = npmInstall(src_ts);
+    if (!existsSync(`${src}node_modules`)) {
+        await npmInstall(src);
     }
-    npmPromise
-        .then(() => buildReact(src_ts, { rootDir: __dirname, vite: true }))
-        .then(() => tsCopyAllFiles())
-        .catch(e => console.error(`Cannot build: ${e}`));
+
+    // tsc checks the sources first (types for TypeScript, syntax for JavaScript), then vite builds the bundle
+    await buildReact(src, { rootDir: __dirname, vite: true, tsc: true });
+
+    copyFiles([`${srcDir}build/customWidgets.js`], `widgets/${adapterName}`);
+    // Optional icon set: public/icon-set.json of the widget project (see README)
+    copyFiles([`${srcDir}build/icon-set.json`], `widgets/${adapterName}`);
+    copyFiles([`${srcDir}build/assets/*.*`], `widgets/${adapterName}/assets`);
+    copyFiles([`${srcDir}build/img/*`], `widgets/${adapterName}/img`);
 }
 
-// ------------------- tasks for javascript-vite ----------------------
-
-const SRC_JSV = 'src-widgets-jsvite/';
-const src_jsv = `${__dirname}/${SRC_JSV}`;
-
-function jsvClean() {
-    deleteFoldersRecursive(`${src_jsv}build`);
-    deleteFoldersRecursive(`${__dirname}/widgets`);
-}
-
-function jsvCopyAllFiles() {
-    copyFiles([`${SRC_JSV}build/customWidgets.js`], `widgets/${adapterName}`);
-    copyFiles([`${SRC_JSV}build/assets/*.*`], `widgets/${adapterName}/assets`);
-    copyFiles([`${SRC_JSV}build/img/*`], `widgets/${adapterName}/img`);
-}
-
+let srcDir;
 if (process.argv.includes('--javascript-vite')) {
-    jsvClean();
-    let npmPromise;
-    if (existsSync(`${src_jsv}/node_modules`)) {
-        npmPromise = Promise.resolve();
-    } else {
-        npmPromise = npmInstall(src_jsv);
-    }
-    npmPromise
-        .then(() => buildReact(src_jsv, { rootDir: __dirname, vite: true }))
-        .then(() => jsvCopyAllFiles())
-        .catch(e => console.error(`Cannot build: ${e}`));
+    srcDir = 'src-widgets-jsvite/';
+} else if (process.argv.includes('--typescript') || process.argv.length === 2) {
+    srcDir = 'src-widgets-ts/';
+}
+
+if (srcDir) {
+    build(srcDir).catch(e => {
+        console.error(`Cannot build: ${e}`);
+        process.exit(1);
+    });
 }

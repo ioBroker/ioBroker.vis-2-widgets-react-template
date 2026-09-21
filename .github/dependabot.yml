@@ -27,7 +27,7 @@ updates:
       versioning-strategy: increase
 
     - package-ecosystem: npm
-      directory: '/src-widgets-js'
+      directory: '/src-widgets-jsvite'
       schedule:
           interval: monthly
           time: '04:00'
