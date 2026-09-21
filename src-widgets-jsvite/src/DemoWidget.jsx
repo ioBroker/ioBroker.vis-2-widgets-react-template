@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@mui/material';
 
-class DemoWidget extends window.visRxWidget {
+export default class DemoWidget extends window.visRxWidget {
     static getWidgetInfo() {
         return {
             id: 'tplDemoWidget',
@@ -96,5 +96,3 @@ class DemoWidget extends window.visRxWidget {
         );
     }
 }
-
-export default DemoWidget;

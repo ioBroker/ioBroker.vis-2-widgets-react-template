@@ -21,9 +21,7 @@ export default [
             '.__mf__temp/',
             'vite.config.*',
             'vite-env.d.ts',
-            'public/',
-            'src/Components/blockly-plugins/**/*',
-            'src/Components/BlocklyEditorTS.tsx',
+            'public/'
         ],
     },
     {
