@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": ["ESNext"],
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true,
+        "noEmit": true,
+        "types": ["node"]
+    },
+    // Only the build script lives here; the widget sources have their own tsconfig.json
+    "include": ["tasks.ts"],
+    "exclude": ["node_modules", "src-widgets-ts", "src-widgets-jsvite", "widgets", "tmp"]
+}
