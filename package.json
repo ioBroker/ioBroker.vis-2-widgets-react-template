@@ -6,6 +6,9 @@
     "contributors": [
         "bluefox <dogafox@gmail.com>"
     ],
+    "engines": {
+        "node": ">=22.19.0"
+    },
     "homepage": "https://github.com/ioBroker/ioBroker.vis-2-widgets-react-template",
     "license": "MIT",
     "repository": {
@@ -24,7 +27,10 @@
         "@iobroker/eslint-config": "^2.3.4",
         "@iobroker/types-vis-2": "~2.20.1",
         "@iobroker/vis-2-widgets-testing": "^2.0.0",
-        "mocha": "^12.0.2"
+        "@types/node": "^26.4.1",
+        "mocha": "^12.0.2",
+        "tsx": "^4.21.1",
+        "typescript": "~6.0.3"
     },
     "main": "widgets/vis-2-widgets-react-template/customWidgets.js",
     "files": [
@@ -34,12 +40,13 @@
         "LICENSE"
     ],
     "scripts": {
-        "prepublishOnly": "node tasks",
-        "lint": "cd src-widgets-ts && eslint -c eslint.config.mjs",
+        "prepublishOnly": "tsx tasks.ts",
+        "check": "tsc",
+        "lint": "eslint -c eslint.config.mjs tasks.ts && cd src-widgets-ts && eslint -c eslint.config.mjs",
         "lint-jsv": "cd src-widgets-jsvite && eslint -c eslint.config.mjs",
-        "build": "node tasks --typescript",
-        "build-ts": "node tasks --typescript",
-        "build-jsv": "node tasks --javascript-vite",
+        "build": "tsx tasks.ts --typescript",
+        "build-ts": "tsx tasks.ts --typescript",
+        "build-jsv": "tsx tasks.ts --javascript-vite",
         "release": "release-script",
         "release-patch": "release-script patch --yes",
         "release-minor": "release-script minor --yes",
