@@ -29,7 +29,7 @@
         "@iobroker/vis-2-widgets-testing": "^2.0.0",
         "@types/node": "^26.4.1",
         "mocha": "^12.0.2",
-        "tsx": "^4.21.1",
+        "tsx": "^4.23.15",
         "typescript": "~6.0.3"
     },
     "main": "widgets/vis-2-widgets-react-template/customWidgets.js",
