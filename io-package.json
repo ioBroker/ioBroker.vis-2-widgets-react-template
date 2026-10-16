@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "vis-2-widgets-react-template",
-    "version": "1.3.1",
+    "version": "2.0.0",
     "news": {
+      "2.0.0": {
+        "en": "improve documentation\nadd missing eslint file to prevent markdown formating errors\nRemoved the JavaScript project based on CRA (craco). The JavaScript example is built with vite now\nFixed TypeScript configuration, lint configuration and the widget test\nFixed the format of the icon set file: keywords are stored in `words`",
+        "de": "Unterlagen verbessern\nFehlende ESLINT-Datei gegen Markdownfehler hinzufügen\nJavaScript-Projekt auf CRA (Craco) entfernt. Das JavaScript-Beispiel nutzt Vite Now\nFeste TypeScript-Konfiguration, Lint-Konfiguration und Widget-Test\nFormat der Icon-Set-Datei behoben: Keywords in `Words`",
+        "ru": "улучшить документацию\nдобавьте недостающий файл eslint, чтобы предотвратить ошибки форматирования Markdown\nУдален проект JavaScript на основе CRA (craco). Пример JavaScript теперь создан с помощью vite\nИсправлена конфигурация TypeScript, конфигурация lint и тест виджетов\nИсправлен формат файла набора значков: ключевые слова хранятся в `words`",
+        "pt": "melhore a documentação\nadicione o arquivo eslint ausente para evitar erros de markdown\nRemovido o projeto JavaScript CRA (craco). O exemplo JavaScript é feito com vite now\nConfiguração fixa de TypeScript, lint e teste de widget\nCorrigido o formato do arquivo de ícones: palavras em `palavras`",
+        "nl": "documentatie verbeteren\nvoeg een ontbrekend ESLINT-bestand toe om fouten bij het opmaken van markdown te voorkomen\nHet JavaScript-project op basis van CRA (craco) is verwijderd. Het JavaScript-voorbeeld is nu gebouwd met vite\nVaste TypeScript-configuratie, lintconfiguratie en de widgettest\nDe indeling van het bestand met de pictogrammenset is opgelost: trefwoorden worden opgeslagen in `woorden`",
+        "fr": "améliorer la documentation\najouter un fichier ESLINT pour éviter les erreurs de formatage\nSuppression du projet JavaScript basé sur CRA (craco). L'exemple JavaScript a été créé avec vite now\nConfiguration fixe de TypeScript, de Lint et du test du widget\nFormat du jeu d'icônes corrigé : les mots clés sont stockés dans Words",
+        "it": "migliorare i documenti\naggiungere il file eslint mancante per evitare errori\nRimosso il progetto JavaScript su CRA (craco). L'esempio JavaScript è creato con vite now\nConfigurazione fissa di TypeScript, lint e test del widget\nRisolto il formato del set di icone: le parole chiave sono",
+        "es": "mejorar la documentación\nañadir el archivo eslint que falta para evitar errores de formato\nEliminó el proyecto JavaScript basado en CRA (craco). El ejemplo de JavaScript ahora se crea con vite\nConfiguración fija de TypeScript, configuración de lint y prueba de widgets\nSe ha corregido el formato del archivo de iconos: las palabras se guardan en «palabras»",
+        "pl": "poprawa dokumentacji\ndodaj brakujący plik eslint, aby zapobiec błędom formatowania znaczników\nUsunięto projekt JavaScript oparty na CRA (craco). Przykład JavaScript jest zbudowany z vite now\nNaprawiono konfigurację TypeScript, konfigurację kłaczków i test widżetu\nNaprawiono format pliku zestawu ikon: słowa kluczowe są przechowywane w `słowach`",
+        "uk": "покращити документацію\nдодайте відсутній файл eslint, щоб запобігти помилкам форматування уцінок\nВидалено проект JavaScript на основі CRA (craco). Приклад JavaScript побудований за допомогою vite зараз\nВиправлена конфігурація TypeScript, конфігурація lint та тест віджетів\nВиправлено формат файлу набору значків: ключові слова зберігаються в `слова`",
+        "zh-cn": "改进文档\n添加缺失的 eslint 文件以防止 Markdown 格式错误\n移除了基于 CRA (craco) 的 JavaScript 项目。JavaScript 示例现在是使用 vite 构建的\n修复了 TypeScript 配置、lint 配置和小部件测试\n修复了图标集文件的格式：关键字存储在`words`中"
+      },
       "1.3.1": {
         "en": "Added Icon Set example",
         "de": "Hinzugefügt Icon Beispiel",
@@ -80,19 +93,6 @@
         "pl": "zaktualizowane pakiety",
         "uk": "оновлені пакети",
         "zh-cn": "更新软件包"
-      },
-      "0.2.1": {
-        "en": "update packages",
-        "de": "update-pakete",
-        "ru": "обновление пакетов",
-        "pt": "pacotes de atualização",
-        "nl": "vertaling:",
-        "fr": "mettre à jour les paquets",
-        "it": "pacchetti di aggiornamento",
-        "es": "actualizar paquetes",
-        "pl": "pakiet aktualizacji",
-        "uk": "оновлення пакетів",
-        "zh-cn": "更新包"
       }
     },
     "title": "vis-2-widgets-react-template.org",

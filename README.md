@@ -182,8 +182,7 @@ put your SVG files into `src-widgets-ts/src-icon-set/` and call `npm run icon-se
 <!--
     ### **WORK IN PROGRESS**
 -->
-
-### **WORK IN PROGRESS**
+### 2.0.0 (2026-10-16)
 
 - (oweitman) improve documentation
 - (oweitman) add missing eslint file to prevent markdown formating errors
